@@ -13,21 +13,21 @@ label start:
 
     # this is the start of the game/demo. This is the first section: pregame. It lets us get acquainted with our protagonists and their bickering. 
 
-  "I look at my reflection and try to stay positive. However, I can't get the corner of my mouth to turn upwards at what I see."
+    "I look at my reflection and try to stay positive. However, I can't get the corner of my mouth to turn upwards at what I see."
 
-  "An undercover mission required some level of disguise and an appearance like mine was hard to mistake, to put it mildly. I was trying to hide that, but I was doing a shit job."
+    "An undercover mission required some level of disguise and an appearance like mine was hard to mistake, to put it mildly. I was trying to hide that, but I was doing a shit job."
 
-	"I got this job because I'm good at what I do, very good in fact. However, it was stupid moments like this that made me have doubts about my own abilities. Luckily, I wasn't being paid to do this part."
+    "I got this job because I'm good at what I do, very good in fact. However, it was stupid moments like this that made me have doubts about my own abilities. Luckily, I wasn't being paid to do this part."
 
-	"I was getting paid to kill someone. That was something I should have no issues with, at least."
+    "I was getting paid to kill someone. That was something I should have no issues with, at least."
 
-	"Still, I can't help but feel some mix of disgust and disappointment as I stare at the sickly green appearance of my cheeks. This definitely wasn't my forte and I just wish by the end of it I could make my face passable."
+    "Still, I can't help but feel some mix of disgust and disappointment as I stare at the sickly green appearance of my cheeks. This definitely wasn't my forte and I just wish by the end of it I could make my face passable."
     
     scene bg homebase
 
     # this is a false choice: it doesn't take you out of the scene but it provides more player interactivity. it can be boring to just read for too long without something to do so I include these to keep the player awake.
 
-    menu
+    menu:
         "I feel a frigid hand on the back of my neck.":
             jump pregame_1
 
@@ -75,7 +75,7 @@ label pregame_1:
 
     "She ends with a raspberry. It was utterly juvenile but still not unfunny. Even then..."
 
-    menu
+    menu:
         "I should move the conversation along.":
             jump pregame_2
 
