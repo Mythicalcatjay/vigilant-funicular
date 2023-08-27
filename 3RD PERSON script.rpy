@@ -13,21 +13,21 @@ label start:
 
     # this is the start of the game/demo. This is the first section: pregame. It lets us get acquainted with our protagonists and their bickering. 
 
-  "Dick looked at his reflection and tried to stay positive. However, the corners of his mouth refused to turn upwards at what he saw." 
+    "Dick looked at his reflection and tried to stay positive. However, the corners of his mouth refused to turn upwards at what he saw." 
 
-  "An undercover mission required some level of disguise and an appearance like his was hard to mistake, to put it mildly. He was trying to hide that, but he was doing a shitty job."
+    "An undercover mission required some level of disguise and an appearance like his was hard to mistake, to put it mildly. He was trying to hide that, but he was doing a shitty job."
 
-	"He got this job because he was good at what he did, very good in fact. However, it was stupid moments like this that made him have doubts about his own abilities. Luckily, he wasn't being paid to do this part."
+    "He got this job because he was good at what he did, very good in fact. However, it was stupid moments like this that made him have doubts about his own abilities. Luckily, he wasn't being paid to do this part."
 
-	"He was getting paid to kill someone. That was something he should have no issues with, at least."
+    "He was getting paid to kill someone. That was something he should have no issues with, at least."
 
-	"Still, he couldn't help but feel some mix of disgust and disappointment as he stared at the sickly green appearance of his cheeks. This definitely wasn't his forte and he just wished by the end of it he could make his face passable."
+    "Still, he couldn't help but feel some mix of disgust and disappointment as he stared at the sickly green appearance of his cheeks. This definitely wasn't his forte and he just wished by the end of it he could make his face passable."
     
     scene bg homebase
 
     # this is a false choice: it doesn't take you out of the scene but it provides more player interactivity. it can be boring to just read for too long without something to do so I include these to keep the player awake.
 
-    menu
+    menu:
         "He feels a frigid hand on the back of his neck.":
             jump pregame_1
 
@@ -75,7 +75,7 @@ label pregame_1:
 
     "She blew a raspberry. It was utterly juvenile but still not unfunny. Even then..."
 
-    menu
+    menu:
         "He should move the conversation along.":
             jump pregame_2
 
