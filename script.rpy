@@ -126,6 +126,9 @@ label pregame_2:
 
     d "Oh..."
 
+    hide morningstar
+    show morningstar at my_right, tremble
+
     d "Just that you have a history of being overwhelmingly undersocial or getting pissdrunk to the point of causing conflict. I mean, I would hardly find that appropriate at any gathering, much fewer ones amongst the disgustingly rich."
  
     hide dick
