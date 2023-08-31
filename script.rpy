@@ -1,29 +1,4 @@
-# The script of the game goes in this file.
-
-# Character Variables
-
-define d = Character("Dick")
-define m = Character("Morningstar")
-define fd = Character("[fd]")
-define fm = Character("[fm]")
-
-# Transforms
-
-transform my_left:
-    xalign 0.0 yalign -0.3
-transform my_right:
-    xalign 1.0 yalign -0.3 
-transform speak:
-    on show:
-        linear 0.2 zoom 1.10 yalign -0.2
-transform tremble:
-    on show:
-        linear 0.12 xoffset 4
-        linear 0.12 xoffset -4
-        linear 0.12 xoffset 4
-        linear 0.12 xoffset -4
-        repeat
-# The game starts here
+##### This is the main script of the game, intended to be the entire script for the demo and the first chapter of the full game #####
 
 label start:
 
@@ -55,7 +30,7 @@ label pregame_1:
 
     d "What's wrong with you?"
 
-    show dick at my_left
+    show dick 1 75 sulk at my_left
 
     "He tried to shoot daggers at the offender, but she was an immovable object." 
 
@@ -71,12 +46,12 @@ label pregame_1:
     "That's part of what he liked about her, though."
 
     hide dick
-    show dick at my_left, speak
+    show dick 1 75 pissy at my_left, speak
 
     d "You know, you didn't have to do that though, you could've just told me?"
 
     hide dick
-    show dick at my_left
+    show dick 1 75 sulk at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -94,12 +69,12 @@ label pregame_2:
     "All Dick could do was groan until his throat hurt while he worked on that side of his neck. She was absolutely right, he did miss it, but her methods still sucked."
 
     hide dick
-    show dick at my_left, speak
+    show dick 1 75 open at my_left, speak
 
     d "I still can't believe you're being expected to act like a member of high society."
 
     hide dick
-    show dick at my_left
+    show dick 1 75 rbf at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -108,12 +83,12 @@ label pregame_2:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 75 open at my_left, speak
 
     d "Of course you aren't. However, I do happen to recall more than a fair share of stories of your behavior."
 
     hide dick
-    show dick at my_left
+    show dick 1 75 smile at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -122,7 +97,7 @@ label pregame_2:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 75 smile open at my_left, speak
 
     d "Oh..."
 
@@ -132,7 +107,7 @@ label pregame_2:
     d "Just that you have a history of being overwhelmingly undersocial or getting pissdrunk to the point of causing conflict. I mean, I would hardly find that appropriate at any gathering, much less ones amongst the disgustingly rich."
  
     hide dick
-    show dick at my_left
+    show dick 1 75 smile at my_left
 
     "She sputtered for a moment and looked like she was ready to bite his head off. That was always just the right reward for pushing the right button."
 
@@ -144,12 +119,12 @@ label pregame_2:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 75 smile open at my_left, speak
 
     d "Someone had to clean it up."
 
     hide dick
-    show dick at my_left
+    show dick 1 75 smile at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -167,7 +142,7 @@ label pregame_2:
 label pregame_3:
 
     hide dick
-    show dick at my_left, speak
+    show dick 1 50 open at my_left, speak
 
     d "Now, I expect neither of us will be behaving like that for our job. I think it might be good to talk more about more of the details. I have everything I should need but I want to make sure you actually managed to remember it all."
 
@@ -187,7 +162,7 @@ label pregame_3:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 50 open at my_left, speak
     
     d "Anything else?"
 
@@ -201,21 +176,27 @@ label pregame_3:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 50 smile open at my_left, speak
     
     d "Oh no, Madam Morningstar, I simply could never guess if we had anything else we planned on doing. I mean aren't we just going to barge right in and shoot her point blank and then go to jail for the rest of our miserable lives?"
 
     hide dick
-    show dick at my_left
+    show dick 1 50 neutral at my_left
 
     "At that, all he was left with was an exasperated sigh as she ignored him."
 
+    hide dick
+    show dick 1 50 smile at my_left
+
     "It was actually pretty nice getting the chance to piss each other off and push as many buttons as they'd like. It got it out of their systems before they had to go full business and nothing ever carried much real bite anyway."
+
+    hide dick
+    show dick 1 50 rbf at my_left
 
     "After a few beats, it did become apparent she wasn't going to humor him at this point so he spoke up again."
 
     hide dick
-    show dick at my_left, speak
+    show dick 1 50 open at my_left, speak
 
     d "So, do you remember our names? I'm going with..."
 
@@ -235,7 +216,7 @@ label pregame_3:
     d "[fd]."
 
     hide dick
-    show dick at my_left
+    show dick 1 50 smile at my_left
 
     "Now that was a fine name."
 
@@ -250,12 +231,12 @@ label pregame_3:
     "Maybe that opinion wasn't universal."
 
     hide dick
-    show dick at my_left, speak
+    show dick 1 50 open at my_left, speak
 
     d "It's the name of the guy who owns that (type of store) in (other town) and I thought I'd borrow it."
 
     hide dick
-    show dick at my_left
+    show dick 1 50 neutral at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -264,12 +245,12 @@ label pregame_3:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 50 smile open at my_left, speak
 
     d "You got it."
 
     hide dick
-    show dick at my_left
+    show dick 1 50 smile at my_left
     
     jump morningstar_name
 
@@ -287,12 +268,12 @@ label austin_powers:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 50 smile open at my_left, speak
 
     d "You know it, baby!"
 
     hide dick
-    show dick at my_left
+    show dick 1 50 smile at my_left
 
     "Dick rrreow-ed like a cat, or maybe more accurately a dying one, and got a hearty chuckle back."
 
@@ -304,12 +285,12 @@ label austin_powers:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 50 smile open at my_left, speak
 
     d "Groovy!"
 
     hide dick
-    show dick at my_left
+    show dick 1 50 smile at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -333,12 +314,12 @@ label morningstar_name:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 25 open at my_left, speak
 
     d "Isn't that the one always complaining about her husband to anyone who'd listen? She's miserable to be around."
 
     hide dick
-    show dick at my_left
+    show dick 1 25 neutral at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -347,12 +328,12 @@ label morningstar_name:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 25 open at my_left, speak
 
     d "Fair enough, even if it's a bit morbid to say when we're about to attend a wedding."
 
     hide dick
-    show dick at my_left
+    show dick 1 25 neutral at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -361,12 +342,12 @@ label morningstar_name:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 25 pissy at my_left, speak
 
     d "That's so much worse."
 
     hide dick
-    show dick at my_left
+    show dick 1 25 rbf at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -387,12 +368,12 @@ label felicity_shagwell:
     "Morningstar didn't even have to say where she got that one from."
 
     hide dick
-    show dick at my_left, speak
+    show dick 1 25 smile open at my_left, speak
 
     d "Now is it Felicity Shagwell or Shag-very-well?"
 
     hide dick
-    show dick at my_left
+    show dick 1 25 smile at my_left
 
     "He couldn't help but snicker at his own joke."
 
@@ -404,12 +385,12 @@ label felicity_shagwell:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 25 smile open at my_left, speak
 
     d "Oh behave!"
 
     hide dick
-    show dick at my_left
+    show dick 1 25 smile at my_left
 
     jump pregame_4
 
@@ -423,12 +404,12 @@ label pregame_4:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 25 open at my_left, speak
 
     d "It's not like I have a good one to share, and making one up will just make us sound like posers."
 
     hide dick
-    show dick at my_left
+    show dick 1 25 neutral at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -437,16 +418,19 @@ label pregame_4:
     hide morningstar
     show morningstar at my_right
     hide dick
-    show dick at my_left, speak
+    show dick 1 25 smile open at my_left, speak
 
     d "I think that's just because you go by it, so it poisons everything else. So I must concede to having a worse name."
 
     hide dick
-    show dick at my_left
+    show dick 1 25 smile at my_left
     hide morningstar
     show morningstar at my_right, speak
 
     m "Whatever you say, *Dick*."
+
+    hide dick
+    show dick 1 25 sulk at my_left
 
     m "Are you done with your make-up yet? I think you look beautiful as a bride, but, we might have to get going unless we want to miss the entire wedding."
 
@@ -454,6 +438,9 @@ label pregame_4:
     show morningstar at my_right
     
     "He gave himself a once over and by this point, he looked fine. Not necessarily good, but just fine."
+
+    hide dick
+    show dick 1 25 neutral at my_left
 
     "He gave Morningstar her own once over as well. There was a level of envy that she really didn't have to do much and still looked good. Plus, the formalwear was very different from what he was used to, but not bad."
    
@@ -482,11 +469,13 @@ label pregame_5:
         "Leave to investigate the venue.":
             jump investiage_1
 
-    # Just a little message to keep you in check.
-
 label investiage_1:
 
     scene investiagte_1
+
+    ""
+
+    # Just a little message to keep you in check.
 
     "This is the end of the demo you are playing."
 
