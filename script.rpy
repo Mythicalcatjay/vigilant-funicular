@@ -27,7 +27,7 @@ transform tremble:
 
 label start:
 
-    # this is the start of the game/demo. This is the first section: pregame. It lets us get acquainted with our protagonists and their bickering. 
+    # This is the start of the game/demo. This is the first section: pregame. It lets us get acquainted with our protagonists and their bickering. 
 
     show cg 1
     
@@ -43,7 +43,7 @@ label start:
     
     hide cg 1
 
-    # this is a false choice: it doesn't take you out of the scene but it provides more player interactivity. it can be boring to just read for too long without something to do so I include these to keep the player awake.
+    # This is a false choice: It doesn't take you out of the scene but it provides more player interactivity. it can be boring to just read for too long without something to do so I include these to keep the player awake.
 
     menu:
         "He feels a frigid hand on the back of his neck.":
@@ -103,14 +103,14 @@ label pregame_2:
     hide morningstar
     show morningstar at my_right, speak
 
-    m "Well I am a member in case you forgot. It's not like I'm \"some common robble from the street being dragged in.\""
+    m "Well I am a member in case you forgot. It's not like I'm \"some common rabble from the street being dragged in.\""
 
     hide morningstar
     show morningstar at my_right
     hide dick
     show dick at my_left, speak
 
-    d "Of course you aren't. However, I do happen to recall and remember more than a fair share of stories of your behavior."
+    d "Of course you aren't. However, I do happen to recall more than a fair share of stories of your behavior."
 
     hide dick
     show dick at my_left
@@ -129,7 +129,7 @@ label pregame_2:
     hide morningstar
     show morningstar at my_right, tremble
 
-    d "Just that you have a history of being overwhelmingly undersocial or getting pissdrunk to the point of causing conflict. I mean, I would hardly find that appropriate at any gathering, much fewer ones amongst the disgustingly rich."
+    d "Just that you have a history of being overwhelmingly undersocial or getting pissdrunk to the point of causing conflict. I mean, I would hardly find that appropriate at any gathering, much less ones amongst the disgustingly rich."
  
     hide dick
     show dick at my_left
@@ -169,7 +169,7 @@ label pregame_3:
     hide dick
     show dick at my_left, speak
 
-    d "Now I expect neither of us will be behaving like that for our job, I think it might be good to talk more about more of the details. I have everything I should need but I want to make sure you actually managed to remember it all."
+    d "Now, I expect neither of us will be behaving like that for our job. I think it might be good to talk more about more of the details. I have everything I should need but I want to make sure you actually managed to remember it all."
 
     hide dick
     show dick at my_left
@@ -289,12 +289,12 @@ label austin_powers:
     hide dick
     show dick at my_left, speak
 
-    d "You know it baby!"
+    d "You know it, baby!"
 
     hide dick
     show dick at my_left
 
-    "Dick reow-ed like a cat, or maybe more accurately a dying one, and got a hearty chuckle back."
+    "Dick rrreow-ed like a cat, or maybe more accurately a dying one, and got a hearty chuckle back."
 
     hide morningstar
     show morningstar at my_right, speak
@@ -310,6 +310,8 @@ label austin_powers:
 
     hide dick
     show dick at my_left
+    hide morningstar
+    show morningstar at my_right, speak
 
     jump morningstar_name
 
@@ -325,9 +327,6 @@ label morningstar_name:
 
         if fm == "Felicity" or fm == "felicity" or fm == "Felicity Shagwell" or fm == "felicity shagwell":
             renpy.jump("felicity_shagwell")
-
-    hide morningstar
-    show morningstar at my_right, speak
 
     m "I'm going with [fm], like that one pastor's wife with the lopsided boobjob."
 
@@ -390,7 +389,7 @@ label felicity_shagwell:
     hide dick
     show dick at my_left, speak
 
-    d "Now is it Felicity Shagwell or Shag very well?"
+    d "Now is it Felicity Shagwell or Shag-very-well?"
 
     hide dick
     show dick at my_left
@@ -433,30 +432,30 @@ label pregame_4:
     hide morningstar
     show morningstar at my_right, speak
 
-    m "You'll just have to be some ugly cousin of mine. [fd] Morningstar is dogshit though."
+    m "You'll just have to be some ugly cousin of mine. [fd] Morningstar is dogshit, though."
 
     hide morningstar
     show morningstar at my_right
     hide dick
     show dick at my_left, speak
 
-    d "I think that's just because you go by it so it poisons everything else. So I must concede to having a worse name."
+    d "I think that's just because you go by it, so it poisons everything else. So I must concede to having a worse name."
 
     hide dick
     show dick at my_left
     hide morningstar
     show morningstar at my_right, speak
 
-    m "Whatever you say, Dick."
+    m "Whatever you say, *Dick*."
 
-    m "Are you done with your make-up yet? I think you look beautiful as a bride but we might have to get going unless we want to miss the entire wedding."
+    m "Are you done with your make-up yet? I think you look beautiful as a bride, but, we might have to get going unless we want to miss the entire wedding."
 
     hide morningstar
     show morningstar at my_right
     
     "He gave himself a once over and by this point, he looked fine. Not necessarily good, but just fine."
 
-    "He gave Morningstar her own once over as well. There was a level of envy that she really didn't have to do much and still looked good. Plus the formalwear was very different from what he was used to, but not bad."
+    "He gave Morningstar her own once over as well. There was a level of envy that she really didn't have to do much and still looked good. Plus, the formalwear was very different from what he was used to, but not bad."
    
     menu:
         "Put on the finishing touches.":
@@ -467,14 +466,14 @@ label pregame_5:
     hide dick
     show dick at my_left, speak
 
-    d "I know I look beautiful always, but I guess I've finally reached the level of perfection I wanted"
+    d "I know I look beautiful always, but I guess I've finally reached the level of perfection I wanted."
 
     hide dick
     show dick at my_left
     hide morningstar
     show morningstar at my_right, speak
 
-    m "Sorry, I forgot just how many of your own farts you sniff."
+    m "Sorry, I forgot just how many of your farts you sniff."
 
     hide morningstar
     show morningstar at my_right
