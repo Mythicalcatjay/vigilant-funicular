@@ -147,7 +147,7 @@ label pregame_3:
     d "Now, I expect neither of us will be behaving like that for our job. I think it might be good to talk more about more of the details. I have everything I should need but I want to make sure you actually managed to remember it all."
 
     hide dick
-    show dick at my_left
+    show dick 1 50 neutral at my_left
     hide morningstar
     show morningstar at my_right, speak
 
@@ -167,7 +167,7 @@ label pregame_3:
     d "Anything else?"
 
     hide dick
-    show dick at my_left
+    show dick 1 50 neutral at my_left
     hide morningstar
     show morningstar at my_right, speak
 
