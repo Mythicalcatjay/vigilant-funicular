@@ -62,6 +62,33 @@ image morningstar blue smile open = "morningstar blue/smile open.png"
 image morningstar blue smile = "morningstar blue/smile.png"
 image morningstar blue unhinged = "morningstar blue/unhinged.png"
 
+image dick neutral ="dick/dick/neutral.png"
+image dick open ="dick/dick/open.png"
+image dick pissy ="dick/dick/pissy.png"
+image dick rbf ="dick/dick/rbf.png"
+image dick smile ="dick/dick/smile.png"
+image dick smile open ="dick/dick/smile open.png"
+image dick frown ="dick/dick/frown.png"
+image dick frown open ="dick/dick/frown open.png"
+
+image dick red neutral ="dick/dick red/neutral.png"
+image dick red open ="dick/dick red/open.png"
+image dick red pissy ="dick/dick red/pissy.png"
+image dick red rbf ="dick/dick red/rbf.png"
+image dick red smile ="dick/dick red/smile.png"
+image dick red smile open ="dick/dick red/smile open.png"
+image dick red frown ="dick/dick red/frown.png"
+image dick red frown open ="dick/dick red/frown open.png"
+
+image dick blue neutral ="dick/dick blue/neutral.png"
+image dick blue open ="dick/dick blue/open.png"
+image dick blue pissy ="dick/dick blue/pissy.png"
+image dick blue rbf ="dick/dick blue/rbf.png"
+image dick blue smile ="dick/dick blue/smile.png"
+image dick blue smile open ="dick/dick blue/smile open.png"
+image dick blue frown ="dick/dick blue/frown.png"
+image dick blue frown open ="dick/dick blue/frown open.png"
+
 # Demo Characters
 
 
@@ -72,6 +99,9 @@ image morningstar blue unhinged = "morningstar blue/unhinged.png"
 
 
 # BGs
+
+
+# Info Pictures
 
 
 # Transformations
@@ -119,3 +149,21 @@ define rsmovement = MoveTransition(
                         time_warp=_warper.ease_back,
                         enter_time_warp=None,
                         leave_time_warp=None)
+
+# Image Buttons
+
+screen snake:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "snake_idle.png"
+            hover "snake_hover.png"
+            action Jump("snake")
+
+# Variables
+
+$ snake = 0
+$ snakeinfo = 0
+$ drink = 0
