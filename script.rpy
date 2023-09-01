@@ -31,10 +31,12 @@ label pregame_1:
     d "What's wrong with you?"
 
     show dick 1 75 sulk at my_left
+    with lsmovement
 
     "He tried to shoot daggers at the offender, but she was an immovable object." 
 
     show morningstar open at my_right, speak
+    with rsmovement
 
     m "You missed that entire side of your neck with your base coat because you were hiding it with your hair. You know, the hair you plan on tying back?"
 
