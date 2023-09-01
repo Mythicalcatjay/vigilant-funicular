@@ -34,12 +34,12 @@ label pregame_1:
 
     "He tried to shoot daggers at the offender, but she was an immovable object." 
 
-    show morningstar at my_right, speak
+    show morningstar open at my_right, speak
 
     m "You missed that entire side of your neck with your base coat because you were hiding it with your hair. You know, the hair you plan on tying back?"
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
 
     "Of course, that was to be expected from the snarly character he was going to be accompanied by. She was damn good at what she did, but she sure wasn't mild-mannered."
 
@@ -53,12 +53,12 @@ label pregame_1:
     hide dick
     show dick 1 75 sulk at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar open at my_right, speak
 
     m "But then you'd miss it and just do it on the other side."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
 
     menu:
         "Bring the makeup brush to that side of his neck.":
@@ -76,12 +76,12 @@ label pregame_2:
     hide dick
     show dick 1 75 rbf at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar frown open at my_right, speak
 
     m "Well I am a member in case you forgot. It's not like I'm \"some common rabble from the street being dragged in.\""
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar frown at my_right
     hide dick
     show dick 1 75 open at my_left, speak
 
@@ -90,19 +90,19 @@ label pregame_2:
     hide dick
     show dick 1 75 smile at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar frown open at my_right, speak
 
     m "Fuck does that mean?"
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar frown at my_right
     hide dick
     show dick 1 75 smile open at my_left, speak
 
     d "Oh..."
 
     hide morningstar
-    show morningstar at my_right, tremble
+    show morningstar shock at my_right, tremble
 
     d "Just that you have a history of being overwhelmingly undersocial or getting pissdrunk to the point of causing conflict. I mean, I would hardly find that appropriate at any gathering, much less ones amongst the disgustingly rich."
  
@@ -112,12 +112,12 @@ label pregame_2:
     "She sputtered for a moment and looked like she was ready to bite his head off. That was always just the right reward for pushing the right button."
 
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar o at my_right, speak
     
     m "And who was always there when I was tipsy or hiding?"
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar smile at my_right
     hide dick
     show dick 1 75 smile open at my_left, speak
 
@@ -126,12 +126,12 @@ label pregame_2:
     hide dick
     show dick 1 75 smile at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar smile open at my_right, speak
 
     m "Wow, didn't know you had to clean where the sun doesn't shine."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar smile at my_right
 
     "She blew a raspberry. It was utterly juvenile but still not unfunny. Even then..."
 
@@ -149,18 +149,27 @@ label pregame_3:
     hide dick
     show dick 1 50 neutral at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar o at my_right, speak
 
     m "The hell's that supposed to mean? I was given the directions initially, not you."
 
+    hide morningstar
+    show morningstar smile open at my_right, speak
+
     m "But if baby needs a refresher, I guess I can do it without making you get on your hands and knees. Plus we're about to make enough money to blow our dicks off."
 
+    hide morningstar
+    show morningstar unhinged at my_right, speak
+
     m "We're going to start out with a bang, killing a bride on her wedding day during the reception. Put some fear of god into everyone attending."
+
+    hide morningstar
+    show morningstar smile open at my_right, speak
 
     m "Her name is (bullshit name), soon to be (bullshittier name). It shouldn't be hard to tell her apart though, unless someone else gets the bright idea to wear white during a wedding."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
     hide dick
     show dick 1 50 open at my_left, speak
     
@@ -169,12 +178,12 @@ label pregame_3:
     hide dick
     show dick 1 50 neutral at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar frown open at my_right, speak
 
     m "I don't know, dipshit, does it look like we have anything else prepared?"
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar frown at my_right
     hide dick
     show dick 1 50 smile open at my_left, speak
     
@@ -221,12 +230,12 @@ label pregame_3:
     "Now that was a fine name."
 
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar o at my_right, speak
 
     m "Why? Where did you get that? It sucks. You don't look like a [fd]."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
 
     "Maybe that opinion wasn't universal."
 
@@ -238,12 +247,12 @@ label pregame_3:
     hide dick
     show dick 1 50 neutral at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar open at my_right, speak
 
     m "Ah, so you took it from someone completely miserable in that shit hole, but he's rich so it's fine."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
     hide dick
     show dick 1 50 smile open at my_left, speak
 
@@ -259,14 +268,14 @@ label austin_powers:
     d "[fd]."
 
     hide dick
-    show dick at my_left
+    show dick 1 50 smile at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar smile open at my_right, speak
 
     m "Like Austin Powers?"
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar smile at my_right
     hide dick
     show dick 1 50 smile open at my_left, speak
 
@@ -278,12 +287,12 @@ label austin_powers:
     "Dick rrreow-ed like a cat, or maybe more accurately a dying one, and got a hearty chuckle back."
 
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar smile open at my_right, speak
 
     m "Maybe after this mission we can see if you really shag like a mink."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar smile at my_right
     hide dick
     show dick 1 50 smile open at my_left, speak
 
@@ -292,7 +301,7 @@ label austin_powers:
     hide dick
     show dick 1 50 smile at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar open at my_right, speak
 
     jump morningstar_name
 
@@ -312,7 +321,7 @@ label morningstar_name:
     m "I'm going with [fm], like that one pastor's wife with the lopsided boobjob."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
     hide dick
     show dick 1 25 open at my_left, speak
 
@@ -321,12 +330,12 @@ label morningstar_name:
     hide dick
     show dick 1 25 neutral at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar o at my_right, speak
 
     m "Does anyone in around here have something nice to say about their husbands?"
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
     hide dick
     show dick 1 25 open at my_left, speak
 
@@ -335,12 +344,12 @@ label morningstar_name:
     hide dick
     show dick 1 25 neutral at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar smile open at my_right, speak
 
     m "That'll be the only bride to not have anything to say about her groom, nice or otherwise."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar smile at my_right
     hide dick
     show dick 1 25 pissy at my_left, speak
 
@@ -349,7 +358,7 @@ label morningstar_name:
     hide dick
     show dick 1 25 rbf at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar open at my_right, speak
 
     m "It's not like I'm lying. Unless her last words are telling him to fuck himself."
 
@@ -358,12 +367,12 @@ label morningstar_name:
 label felicity_shagwell:
 
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar smile open at my_right, speak
 
     m "I'm going with [fm]."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar smile at my_right
 
     "Morningstar didn't even have to say where she got that one from."
 
@@ -378,12 +387,12 @@ label felicity_shagwell:
     "He couldn't help but snicker at his own joke."
 
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar smile open at my_right, speak
 
     m "You tell me after we get done."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar smile at my_right
     hide dick
     show dick 1 25 smile open at my_left, speak
 
@@ -397,12 +406,12 @@ label felicity_shagwell:
 label pregame_4:
 
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar open at my_right, speak
     
     m "And we're still using my family name?"
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
     hide dick
     show dick 1 25 open at my_left, speak
 
@@ -411,12 +420,12 @@ label pregame_4:
     hide dick
     show dick 1 25 neutral at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar open at my_right, speak
 
     m "You'll just have to be some ugly cousin of mine. [fd] Morningstar is dogshit, though."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
     hide dick
     show dick 1 25 smile open at my_left, speak
 
@@ -425,7 +434,7 @@ label pregame_4:
     hide dick
     show dick 1 25 smile at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar open at my_right, speak
 
     m "Whatever you say, *Dick*."
 
@@ -435,7 +444,7 @@ label pregame_4:
     m "Are you done with your make-up yet? I think you look beautiful as a bride, but, we might have to get going unless we want to miss the entire wedding."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar rbf at my_right
     
     "He gave himself a once over and by this point, he looked fine. Not necessarily good, but just fine."
 
@@ -458,12 +467,12 @@ label pregame_5:
     hide dick
     show dick at my_left
     hide morningstar
-    show morningstar at my_right, speak
+    show morningstar smile open at my_right, speak
 
     m "Sorry, I forgot just how many of your farts you sniff."
 
     hide morningstar
-    show morningstar at my_right
+    show morningstar smile at my_right
 
     menu:
         "Leave to investigate the venue.":
