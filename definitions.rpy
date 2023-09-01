@@ -32,6 +32,16 @@ image dick 1 75 smile ="dick/dick 1 75/smile.png"
 image dick 1 75 smile open ="dick/dick 1 75/smile open.png"
 image dick 1 75 sulk ="dick/dick 1 75/sulk.png"
 
+image morningstar frown open = "morningstar/frown open.png"
+image morningstar frown = "morningstar/frown.png"
+image morningstar o = "morningstar/o.png"
+image morningstar open = "morningstar/open.png"
+image morningstar rbf = "morningstar/rbf.png"
+image morningstar shock = "morningstar/shock.png"
+image morningstar smile open = "morningstar/smile open.png"
+image morningstar smile = "morningstar/smile.png"
+image morningstar unhinged = "morningstar/unhinged.png"
+
 # Demo Characters
 
 
