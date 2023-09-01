@@ -30,12 +30,12 @@ label pregame_1:
 
     d "What's wrong with you?"
 
-    show dick 1 75 sulk at my_left
+    show dick 1 75 sulk at my_left 
     with lsmovement
 
     "He tried to shoot daggers at the offender, but she was an immovable object." 
 
-    show morningstar open at my_right, speak
+    show morningstar open at my_right, speak 
     with rsmovement
 
     m "You missed that entire side of your neck with your base coat because you were hiding it with your hair. You know, the hair you plan on tying back?"
@@ -462,12 +462,12 @@ label pregame_4:
 label pregame_5:
 
     hide dick
-    show dick at my_left, speak
+    show dick smile open at my_left, speak
 
     d "I know I look beautiful always, but I guess I've finally reached the level of perfection I wanted."
 
     hide dick
-    show dick at my_left
+    show dick smile at my_left
     hide morningstar
     show morningstar smile open at my_right, speak
 
@@ -484,7 +484,74 @@ label investiage_1:
 
     scene investiagte_1
 
-    ""
+    "It didn't take long to get to the venue, a rented hotel with an outdoor setup. Just about everyone was busy doing things like getting ready, the perfect chance to poke around."
+
+    call screen snake
+
+label snake:
+
+    show dick red pissy at my_left, speak
+    with lsmovement
+
+    d "Holy shit, that's a big snake!"
+
+    hide dick
+    show dick red rbf at my_left
+    show morningstar red shock at my_right, speak
+    with rsmovement
+
+    m "Do you know what kind it is?"
+
+    hide morningstar
+    show morningstar red rbf at my_right
+    hide dick
+    show dick red pissy at my_left, speak
+
+    d "I have no idea."
+
+    hide morningstar
+    show morningstar red o at my_right, speak
+    hide dick
+    show dick red rbf at my_left
+
+    m "That sucks, if it were venomous then we'd be onto something. But we'd probably need something to get it to spit into."
+
+    hide morningstar
+    show morningstar red rbf at my_right
+    hide dick
+    show dick red frown open at my_left, speak
+
+    d "And maybe some protection of somekind?"
+
+    hide morningstar
+    show morningstar red open at my_right
+    hide dick
+    show dick red frown at my_left, speak
+
+    m "Oh, yeah sure, that too."
+
+    hide morningstar
+    show morningstar red smile open at my_right
+
+    m "If you wanna be a pussy about it."
+
+    hide morningstar
+    show morningstar red smile at my_right
+    hide dick
+    show dick red frown open at my_left, speak
+
+    d "Sometimes I wonder if you have a death wish."
+
+    hide morningstar
+    hide dick
+
+    show snakegotten
+
+    $ snake = 1
+
+    hide snakegotten
+
+    jump investiage_1
 
     # Just a little message to keep you in check.
 
