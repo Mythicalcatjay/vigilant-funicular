@@ -5,7 +5,8 @@
 # 4. Open the launcher's code.
 # 5. Make a new file where the rest are called "skin.rpy"
 # 6. Copy all of this code into your new file
-# 7. Reload your launcher and it should have a new skin!
+# 7. Go back into settings and select "Custom Skin"
+# 8. Enjoy!
 
 init -2 python:
     # The color of non-interactive text.
