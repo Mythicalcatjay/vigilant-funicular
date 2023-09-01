@@ -41,6 +41,7 @@ image morningstar shock = "morningstar/shock.png"
 image morningstar smile open = "morningstar/smile open.png"
 image morningstar smile = "morningstar/smile.png"
 image morningstar unhinged = "morningstar/unhinged.png"
+
 image morningstar red frown open = "morningstar red/frown open.png"
 image morningstar red frown = "morningstar red/frown.png"
 image morningstar red o = "morningstar red/o.png"
