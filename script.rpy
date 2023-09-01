@@ -4,7 +4,7 @@ label start:
 
     # This is the start of the game/demo. This is the first section: pregame. It lets us get acquainted with our protagonists and their bickering. 
 
-    show cg 1
+    show cg1
     
     "Dick looked at his reflection and tried to stay positive. However, the corners of his mouth refused to turn upwards at what he saw." 
 
@@ -16,7 +16,7 @@ label start:
 
     "Still, he couldn't help but feel some mix of disgust and disappointment as he stared at the sickly green appearance of his cheeks. This definitely wasn't his forte and he just wished by the end of it he could make his face passable."
     
-    hide cg 1
+    hide cg1
 
     # This is a false choice: It doesn't take you out of the scene but it provides more player interactivity. it can be boring to just read for too long without something to do so I include these to keep the player awake.
 
@@ -482,7 +482,7 @@ label pregame_5:
 
 label investiage_1:
 
-    scene investiagte_1
+    scene investigate 1
 
     "It didn't take long to get to the venue, a rented hotel with an outdoor setup. Just about everyone was busy doing things like getting ready, the perfect chance to poke around."
 
@@ -524,14 +524,14 @@ label snake:
     d "And maybe some protection of somekind?"
 
     hide morningstar
-    show morningstar red open at my_right
+    show morningstar red open at my_right, speak
     hide dick
-    show dick red frown at my_left, speak
+    show dick red frown at my_left
 
     m "Oh, yeah sure, that too."
 
     hide morningstar
-    show morningstar red smile open at my_right
+    show morningstar red smile open at my_right, speak
 
     m "If you wanna be a pussy about it."
 
