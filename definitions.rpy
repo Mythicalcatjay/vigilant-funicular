@@ -97,3 +97,25 @@ transform jitters:
         linear 0.12 yoffset 4
         linear 0.12 yoffset -4
         repeat
+
+# Extra Definitions
+
+define lsmovement = MoveTransition(
+                        delay=0.3,
+                        enter=offscreenleft,
+                        leave=None,
+                        old=False,
+                        layers=['master'],
+                        time_warp=_warper.ease_back,
+                        enter_time_warp=None,
+                        leave_time_warp=None)
+
+define rsmovement = MoveTransition(
+                        delay=0.3,
+                        enter=offscreenright,
+                        leave=None,
+                        old=False,
+                        layers=['master'],
+                        time_warp=_warper.ease_back,
+                        enter_time_warp=None,
+                        leave_time_warp=None)
