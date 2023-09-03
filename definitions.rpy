@@ -161,9 +161,3 @@ screen snake:
             idle "snake_idle.png"
             hover "snake_hover.png"
             action Jump("snake")
-
-# Variables
-
-$ snake = 0
-$ snakeinfo = 0
-$ drink = 0
