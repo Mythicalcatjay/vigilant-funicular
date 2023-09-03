@@ -262,6 +262,8 @@ label pregame_3:
 
     hide dick
     show dick 1 50 smile at my_left
+    hide morningstar
+    show morningstar open at my_right, speak
     
     jump morningstar_name
 
@@ -475,6 +477,12 @@ label pregame_5:
 
     hide morningstar
     show morningstar smile at my_right
+  
+    # Variables
+
+    $ snakesee = 0
+    $ snakeinfo = 0
+    $ drink = 0
 
     menu:
         "Leave to investigate the venue.":
@@ -485,9 +493,16 @@ label investiage_1:
     scene investigate 1
 
     "It didn't take long to get to the venue, a rented hotel with an outdoor setup. Just about everyone was busy doing things like getting ready, the perfect chance to poke around."
-
+    
     call screen snake
 
+    # Elif statement. I hate everything in the world. 
+
+    if snakesee >= 1:
+        jump end
+    else:
+        pass
+        
 label snake:
 
     show dick red pissy at my_left, speak
@@ -547,11 +562,13 @@ label snake:
 
     show snakegotten
 
-    $ snake = 1
+    $ snakesee = 1
 
     hide snakegotten
 
     jump investiage_1
+
+label end:
 
     # Just a little message to keep you in check.
 
