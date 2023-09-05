@@ -4,6 +4,17 @@ label start:
 
     # This is the start of the game/demo. This is the first section: pregame. It lets us get acquainted with our protagonists and their bickering. 
 
+    # Variables
+
+    $ investigate1 = False
+    $ investigate2 = False
+    $ investigate3 = False
+    $ investigate4 = False
+
+    $ snakesee = False
+    $ snakeinfo = False
+    $ drink = False
+
     show cg1
     
     "Dick looked at his reflection and tried to stay positive. However, the corners of his mouth refused to turn upwards at what he saw." 
@@ -477,12 +488,6 @@ label pregame_5:
 
     hide morningstar
     show morningstar smile at my_right
-  
-    # Variables
-
-    $ snakesee = 0
-    $ snakeinfo = 0
-    $ drink = 0
 
     menu:
         "Leave to investigate the venue.":
@@ -492,13 +497,18 @@ label investiage_1:
 
     scene investigate 1
 
-    "It didn't take long to get to the venue, a rented hotel with an outdoor setup. Just about everyone was busy doing things like getting ready, the perfect chance to poke around."
+    if investigate1 == False:
+        "It didn't take long to get to the venue, a rented hotel with an outdoor setup. Just about everyone was busy doing things like getting ready, the perfect chance to poke around."
+    else:
+        pass
     
+    $ investigate1 = True
+
     call screen snake
 
     # Elif statement. I hate everything in the world. 
 
-    if snakesee >= 1:
+    if snakesee == True:
         jump end
     else:
         pass
@@ -562,11 +572,44 @@ label snake:
 
     show snakegotten
 
-    $ snakesee = 1
+    $ snakesee = True
 
     hide snakegotten
 
     jump investiage_1
+
+label investigate_2:
+    
+    scene investigate 2
+
+    if investigate2 == False:
+        "words"
+    else:
+        pass
+
+    $ investigate2 = True
+
+label investigate_3:
+
+    scene investigate 3
+
+    if investigate3 == False:
+        "words"
+    else:
+        pass
+
+    $ investigate3 = True
+
+label investigate_4:
+
+    scene investigate 4
+
+    if investigate4 == False:
+        "words"
+    else:
+        pass
+
+    $ investigate4 = True
 
 label end:
 
