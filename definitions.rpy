@@ -152,6 +152,52 @@ define rsmovement = MoveTransition(
 
 # Image Buttons
 
+
+screen left1:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "arrow_left.png"
+            action Jump("investigate_2")
+
+screen right1:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "arrow_right.png"
+            action Jump("investigate_3")
+
+screen right2:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "arrow_right.png"
+            action Jump("investigate_1")
+
+screen left3:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "arrow_left.png"
+            action Jump("investigate_1")
+
+screen right3:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "arrow_right.png"
+            action Jump("investigate_4")
+
 screen snake:
         imagebutton:
             xanchor 0.5
@@ -161,3 +207,23 @@ screen snake:
             idle "snake_idle.png"
             hover "snake_hover.png"
             action Jump("snake")
+
+screen purse:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "purse_idle.png"
+            hover "purse_hover.png"
+            action Jump("purse")
+
+screen gloves:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "gloves_idle.png"
+            hover "gloves_hover.png"
+            action Jump("gloves")
