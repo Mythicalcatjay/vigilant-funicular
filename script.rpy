@@ -529,70 +529,73 @@ label investiage_1:
         
 label snake:
 
-    show dick red pissy at my_left, speak
-    with lsmovement
-
-    d "Holy shit, that's a big snake!"
-
-    hide dick
-    show dick red rbf at my_left
-    show morningstar red shock at my_right, speak
-    with rsmovement
-
-    m "Do you know what kind it is?"
-
-    hide morningstar
-    show morningstar red rbf at my_right
-    hide dick
-    show dick red pissy at my_left, speak
-
-    d "I have no idea."
-
-    hide morningstar
-    show morningstar red o at my_right, speak
-    hide dick
-    show dick red rbf at my_left
-
-    m "That sucks, if it were venomous then we'd be onto something. But we'd probably need something to get it to spit into."
-
-    hide morningstar
-    show morningstar red rbf at my_right
-    hide dick
-    show dick red frown open at my_left, speak
-
-    d "And maybe some protection of somekind?"
-
-    hide morningstar
-    show morningstar red open at my_right, speak
-    hide dick
-    show dick red frown at my_left
-
-    m "Oh, yeah sure, that too."
-
-    hide morningstar
-    show morningstar red smile open at my_right, speak
-
-    m "If you wanna be a pussy about it."
-
-    hide morningstar
-    show morningstar red smile at my_right
-    hide dick
-    show dick red frown open at my_left, speak
-
-    d "Sometimes I wonder if you have a death wish."
-
-    hide morningstar
-    hide dick
-
     if snakesee == False:
+        show dick red pissy at my_left, speak
+        with lsmovement
+
+        d "Holy shit, that's a big snake!"
+
+        hide dick
+        show dick red rbf at my_left
+        show morningstar red shock at my_right, speak
+        with rsmovement
+
+        m "Do you know what kind it is?"
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red pissy at my_left, speak
+
+        d "I have no idea."
+
+        hide morningstar
+        show morningstar red o at my_right, speak
+        hide dick
+        show dick red rbf at my_left
+
+        m "That sucks, if it were venomous then we'd be onto something. But we'd probably need something to get it to spit into."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red frown open at my_left, speak
+
+        d "And maybe some protection of somekind?"
+
+        hide morningstar
+        show morningstar red open at my_right, speak
+        hide dick
+        show dick red frown at my_left
+
+        m "Oh, yeah sure, that too."
+
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+
+        m "If you wanna be a pussy about it."
+
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red frown open at my_left, speak
+
+        d "Sometimes I wonder if you have a death wish."
+
+        hide morningstar
+        hide dick
+
         show snakegotten
         $ snakesee = True
         $ venommethod += 1
         hide snakegotten
-    else:
-        pass
 
-    jump investiage_1
+        jump investiage_1
+    else:
+        
+        "Eugh, that thing isn't moving anytime soon is it? At least if they come up with a plan they don't have to worry about scowering the premises for it."
+
+        jump investiage_1
 
 label investigate_2:
     
@@ -604,6 +607,85 @@ label investigate_2:
         pass
 
     $ investigate2 = True
+
+label purse:
+
+    if heroin == True:
+        "Hopefully whoever owns that purse won't miss what was inside."
+    else:
+        show morningstar red unhinged at my_right, speak
+            
+        m "Don't mind if I do!"
+        
+        hide morningstar
+        show cg2
+
+        "Didn't take long for her to get all up in whoever's purse."
+
+        m "I don't think if we took anything out it here it would be missed. This thing is stuffed to the brim with shit."
+
+        d "Then maybe..."
+
+        m "No."
+
+        d "I didn't even ask yet."
+
+        m "And I know what you're going to say. But there's something way better then money in here."
+
+        "With that she pulls out a little baggie with white powder in it and a needle."
+
+        d "Well, someone's looking to party tonight I guess."
+
+        m "I think it's a good idea to keep a hold onto it, not just because it's easy to kill someone with but also it's good blackmail."
+
+        d "At least I know you aren't crazy enough to try it so I'm up for it."
+
+        m "Don't tempt me with a shitty time."
+
+        show heroingotten
+        $ heroin = True
+        $ poisonmethod += 1
+        hide heroingotten
+
+        "There's still more inside the purse, so..."
+
+        menu:
+            "Morningstar checks the side pocket.":
+                jump letter
+            "Morningstar checks the wallet.":
+                jump money
+
+label letter:
+
+    "Inside it was surprisingly barren, execpt for a piece of paper."
+
+    m "There's something strange in here."
+
+    "She pulled it out so both her and Dick could read it."
+
+    show letter1
+
+    d "You're right. Maybe we can keep a hold on that too?"
+
+    m "That's probably a good idea."
+
+    $ letter += 1
+
+    jump investigate_2
+
+label money:
+
+    "There wasn't much inside the wallet that was interesting other then the usual."
+
+    m "I think we're good unless we want to shovel through gum wrappers."
+
+    d "What about borrowing a few buck there? The owner is heroin there's always plenty in there that goes fast."
+
+    "She hesitated for a moment before giving his nasty look and a few bills."
+
+    m  "If you can find a way to kill someone using only paper money, I'll be impressed beyond words."
+
+    jump investigate_2
 
 label investigate_3:
 
