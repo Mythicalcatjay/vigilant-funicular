@@ -11,9 +11,21 @@ label start:
     $ investigate3 = False
     $ investigate4 = False
 
+    $ mingle1 = False
+    $ mingle2 = False
+    $ mingle3 = False
+    $ mingle4 = False
+
     $ snakesee = False
     $ snakeinfo = False
-    $ drink = False
+    $ glovessee = False
+    $ venommethod = 0
+
+    $ heroin = False
+    $ cokehabit = False
+    $ poisonmethod = 0
+
+    $ letter = 0
 
     show cg1
     
@@ -508,7 +520,9 @@ label investiage_1:
 
     # Elif statement. I hate everything in the world. 
 
-    if snakesee == True:
+    if venommethod == 2:
+        jump end
+    elif poisonmethod == 1:
         jump end
     else:
         pass
@@ -570,11 +584,13 @@ label snake:
     hide morningstar
     hide dick
 
-    show snakegotten
-
-    $ snakesee = True
-
-    hide snakegotten
+    if snakesee == False:
+        show snakegotten
+        $ snakesee = True
+        $ venommethod += 1
+        hide snakegotten
+    else:
+        pass
 
     jump investiage_1
 
@@ -583,7 +599,7 @@ label investigate_2:
     scene investigate 2
 
     if investigate2 == False:
-        "words"
+        "The ceremony area was pretty cute. Extremely uncomfortable looking, though. Hopefully, the ceremony wouldn't take long so it can be remembered as cute."
     else:
         pass
 
@@ -610,6 +626,16 @@ label investigate_4:
         pass
 
     $ investigate4 = True
+
+label investigate_leave:
+
+    "Are you done investigating?"
+
+    menu
+        "Yes, it's time to wait to attend the ceremony"
+            jump end
+        "No, there's still more to find around here."
+            jump investiage_1
 
 label end:
 
