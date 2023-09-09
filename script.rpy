@@ -45,9 +45,7 @@ label start:
 
     menu:
         "He feels a frigid hand on the back of his neck.":
-            jump pregame_1
-
-label pregame_1: 
+            pass 
 
     scene bg homebase
 
@@ -87,9 +85,7 @@ label pregame_1:
 
     menu:
         "Bring the makeup brush to that side of his neck.":
-            jump pregame_2
-
-label pregame_2:
+            pass
 
     "All Dick could do was groan until his throat hurt while he worked on that side of his neck. She was absolutely right, he did miss it, but her methods still sucked."
 
@@ -162,9 +158,7 @@ label pregame_2:
 
     menu:
         "He should move the conversation along.":
-            jump pregame_3
-
-label pregame_3:
+            jump pass
 
     hide dick
     show dick 1 50 open at my_left, speak
@@ -389,7 +383,7 @@ label morningstar_name:
 
     m "It's not like I'm lying. Unless her last words are telling him to fuck himself."
 
-    jump pregame_4
+    jump pregame
 
 label felicity_shagwell:
 
@@ -428,9 +422,9 @@ label felicity_shagwell:
     hide dick
     show dick 1 25 smile at my_left
 
-    jump pregame_4
+    jump pregame
 
-label pregame_4:
+label pregame:
 
     hide morningstar
     show morningstar open at my_right, speak
@@ -482,9 +476,7 @@ label pregame_4:
    
     menu:
         "Put on the finishing touches.":
-            jump pregame_5
-   
-label pregame_5:
+            pass
 
     hide dick
     show dick smile open at my_left, speak
@@ -715,9 +707,10 @@ label investigate_leave:
 
     menu
         "Yes, it's time to wait to attend the ceremony"
-            jump end
+            pass
         "No, there's still more to find around here."
             jump investiage_1
+
 
 label end:
 
