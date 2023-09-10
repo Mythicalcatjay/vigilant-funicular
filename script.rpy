@@ -690,7 +690,7 @@ label money:
 
     m "I think we're good unless we want to shovel through gum wrappers."
 
-    d "What about borrowing a few buck there? The owner is heroin there's always plenty in there that goes fast."
+    d "What about borrowing a few buck there? The owner has heroin, there's always plenty in there that disappears fast."
 
     "She hesitated for a moment before giving his nasty look and a few bills."
 
