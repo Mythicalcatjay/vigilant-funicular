@@ -97,12 +97,18 @@ image dick blue frown open ="dick/dick blue/frown open.png"
 
 # CGs
 
+image cg1 = "cgs/cg1.png"
+image cg2 = "cgs/cg2.png"
 
 # BGs
 
+image investigate 1 = "backgrounds/investigate 1.png"
 
 # Info Pictures
 
+image snakegotten = "info/placeholder.png"
+image heroingotten = "info/placeholder.png"
+image glovesgotten = "info/placeholder.png"
 
 # Transformations
 
@@ -156,44 +162,50 @@ screen left1:
         imagebutton:
             xalign 0.0
             yalign 0.5
-            idle "arrow_left.png"
+            idle "buttons/arrow_left.png"
             action Jump("investigate_2")
 
 screen right1:
         imagebutton:
             xalign 1.0
             yalign 0.5
-            idle "arrow_right.png"
+            idle "buttons/arrow_right.png"
             action Jump("investigate_3")
 
 screen right2:
         imagebutton:
             xalign 1.0
             yalign 0.5
-            idle "arrow_right.png"
+            idle "buttons/arrow_right.png"
             action Jump("investigate_1")
 
 screen left3:
         imagebutton:
             xalign 0.0
             yalign 0.5
-            idle "arrow_left.png"
+            idle "buttons/arrow_left.png"
             action Jump("investigate_1")
 
 screen right3:
         imagebutton:
             xalign 1.0
             yalign 0.5
-            idle "arrow_right.png"
+            idle "buttons/arrow_right.png"
             action Jump("investigate_4")
+
+screen left4:
+        imagebutton:
+            xalign 0.0
+            yalign 0.5
+            idle "buttons/arrow_left.png"
+            action Jump("investigate_3")
 
 screen leaveinvestiagte:
         imagebutton:
             xalign 0.0
             yalign 0.0
-            idle "leave.png"
+            idle "buttons/leave.png"
             action Jump("investigate_leave")
-
 
 screen snake:
         imagebutton:
@@ -201,8 +213,8 @@ screen snake:
             yanchor 0.5
             xpos 0.5
             ypos 0.28
-            idle "snake_idle.png"
-            hover "snake_hover.png"
+            idle "investigate buttons/snake_idle.png"
+            hover "investigate buttons/snake_hover.png"
             action Jump("snake")
 
 screen purse:
@@ -211,8 +223,8 @@ screen purse:
             yanchor 0.5
             xpos 0.5
             ypos 0.28
-            idle "purse_idle.png"
-            hover "purse_hover.png"
+            idle "investigate buttons/purse_idle.png"
+            hover "investigate buttons/purse_hover.png"
             action Jump("purse")
 
 screen gloves:
@@ -221,6 +233,6 @@ screen gloves:
             yanchor 0.5
             xpos 0.5
             ypos 0.28
-            idle "gloves_idle.png"
-            hover "gloves_hover.png"
+            idle "investigate buttons/gloves_idle.png"
+            hover "investigate buttons/gloves_hover.png"
             action Jump("gloves")
