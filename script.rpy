@@ -158,7 +158,7 @@ label start:
 
     menu:
         "He should move the conversation along.":
-            jump pass
+            pass
 
     hide dick
     show dick 1 50 open at my_left, speak
@@ -495,31 +495,40 @@ label pregame:
 
     menu:
         "Leave to investigate the venue.":
-            jump investiage_1
+            jump investigate_1
 
-label investiage_1:
+label investigate_1:
+
+    hide screen left3
+    hide screen right3
+    hide screen gloves
+    hide screen right2
+    hide screen purse
 
     scene investigate 1
 
     if investigate1 == False:
         "It didn't take long to get to the venue, a rented hotel with an outdoor setup. Just about everyone was busy doing things like getting ready, the perfect chance to poke around."
+       
+        $ investigate1 = True
     else:
         pass
-    
-    $ investigate1 = True
-
-    call screen snake
-
-    # Elif statement. I hate everything in the world. 
 
     if venommethod == 2:
-        jump end
+        show screen leaveinvestiagte
     elif poisonmethod == 1:
-        jump end
+        show screen leaveinvestiagte
     else:
         pass
+
+    show screen snake
+    show screen left1
+    call screen right1
         
 label snake:
+
+    hide screen left1
+    hide screen right1
 
     if snakesee == False:
         show dick red pissy at my_left, speak
@@ -591,16 +600,25 @@ label snake:
 
 label investigate_2:
     
+    hide screen left1
+    hide screen right1
+    hide screen snake
+
     scene investigate 2
 
     if investigate2 == False:
         "The ceremony area was pretty cute. Extremely uncomfortable looking, though. Hopefully, the ceremony wouldn't take long so it can be remembered as cute."
+        
+        $ investigate2 = True 
     else:
         pass
 
-    $ investigate2 = True
+    show screen purse
+    call screen right2
 
 label purse:
+
+    hide screen right2
 
     if heroin == True:
         "Hopefully whoever owns that purse won't miss what was inside."
@@ -608,7 +626,8 @@ label purse:
         show morningstar red unhinged at my_right, speak
             
         m "Don't mind if I do!"
-        
+
+        hide screen purse
         hide morningstar
         show cg2
 
@@ -681,36 +700,77 @@ label money:
 
 label investigate_3:
 
+    hide screen left1
+    hide screen right1
+    hide screen snake
+
     scene investigate 3
 
     if investigate3 == False:
         "words"
+        
+        $ investigate3 = True
     else:
         pass
 
-    $ investigate3 = True
+    show screen gloves
+    show screen left3
+    call screen right3 
+
+label gloves:
+
+    hide screen left3
+    hide screen right3
+
+    if glovessee == False:
+        
+        "words"
+
+        show glovesgotten
+        $ glovessee = True
+        $ venommethod += 1
+        hide glovesgotten
+    else:
+        "Those can definately come in handy. There's no better tool for some assassins then the one that gets rid of fingerprints."
+
+        jump investigate_3
 
 label investigate_4:
+
+    hide screen left3
+    hide screen right3
+    hide screen gloves
 
     scene investigate 4
 
     if investigate4 == False:
         "words"
+
+        $ investigate4 = True
     else:
         pass
 
-    $ investigate4 = True
+    call screen left4
 
 label investigate_leave:
 
     "Are you done investigating?"
 
-    menu
-        "Yes, it's time to wait to attend the ceremony"
+    menu:
+        "Yes, it's time to wait to attend the ceremony":
             pass
-        "No, there's still more to find around here."
+        "No, there's still more to find around here.":
             jump investiage_1
 
+    hide screen left1
+    hide screen right1
+    hide screen snake
+    hide screen leaveinvestiagte
+    hide investiage 1
+
+    "It didn't take too long waiting for the other guests to arrive. They were able to bide their time for the ceremony without much of a fuss."
+
+    jump end
 
 label end:
 
