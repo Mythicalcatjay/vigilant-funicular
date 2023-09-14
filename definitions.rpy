@@ -217,16 +217,6 @@ screen snake:
             hover "investigate buttons/snake_hover.png"
             action Jump("snake")
 
-screen purse:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
-            idle "investigate buttons/purse_idle.png"
-            hover "investigate buttons/purse_hover.png"
-            action Jump("purse")
-
 screen gloves:
         imagebutton:
             xanchor 0.5
@@ -236,3 +226,53 @@ screen gloves:
             idle "investigate buttons/gloves_idle.png"
             hover "investigate buttons/gloves_hover.png"
             action Jump("gloves")
+
+screen hotel:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/hotel_idle.png"
+            hover "investigate buttons/hotel_hover.png"
+            action Jump("hotel")
+
+screen arches:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/arches_idle.png"
+            hover "investigate buttons/arches_hover.png"
+            action Jump("arches")
+
+screen fairylights:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/fairylights_idle.png"
+            hover "investigate buttons/fairylights_hover.png"
+            action Jump("fairylights")
+
+screen stones:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/stones_idle.png"
+            hover "investigate buttons/stones_hover.png"
+            action Jump("stones")
+
+screen purse:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/purse_idle.png"
+            hover "investigate buttons/purse_hover.png"
+            action Jump("purse")
