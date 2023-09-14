@@ -11,6 +11,12 @@ label start:
     $ investigate3 = False
     $ investigate4 = False
 
+    $ hotelsee = False
+    $ gardensee = False
+    $ archessee = False
+    $ fairylightssee = False
+    $ stonessee = False
+
     $ mingle1 = False
     $ mingle2 = False
     $ mingle3 = False
@@ -25,7 +31,14 @@ label start:
     $ cokehabit = False
     $ poisonmethod = 0
 
+    $ items = 0
+    $ interactions = 0
+
     $ letter = 0
+
+    jump game_start
+
+label game_start:
 
     show cg1
     
@@ -501,7 +514,6 @@ label investigate_1:
 
     hide screen left3
     hide screen right3
-    hide screen gloves
     hide screen right2
     hide screen purse
 
@@ -521,7 +533,17 @@ label investigate_1:
     else:
         pass
 
+    if glovessee == false:
+        show screen gloves
+    else:
+        pass
+
+    show screen hotel
+    show screen garden
+    show screen stones
+    show screen arches
     show screen snake
+    show screen gloves
     show screen left1
     call screen right1
         
@@ -555,7 +577,7 @@ label snake:
         hide dick
         show dick red rbf at my_left
 
-        m "That sucks, if it were venomous then we'd be onto something. But we'd probably need something to get it to spit into."
+        m "That sucks, if it were venomous then we'd be onto something. But we'd probably need something to get it to spit into or like throw it."
 
         hide morningstar
         show morningstar red rbf at my_right
@@ -598,11 +620,134 @@ label snake:
 
         jump investiage_1
 
+label gloves:
+
+    hide screen left1
+    hide screen right1
+      
+    d "Look at what the cat dragged in!"
+
+    d "Or more accurately what a lazy landscaper left."
+
+    m "You look too excited to see just a pair of fucking gloves."
+
+    d "Why wouldn't I be? They're one of our best tools for any job."
+
+    m "..."
+
+    "Her gaze showed she clearly did not agree."
+
+    m "Aren't you already wearing gloves though?"
+
+    d "Yes, but, these are rubber and mine are just cloth. They're protective and textured."
+
+    d "Plus, you aren't wearing any."
+
+    "Her face twisted at even just the thought of putting them on."
+
+    m "I'd rather cut my palm open."
+
+    "Dick wasn't impressed, but still stowed them away just in case she needed them later or if he may need an upgrade."
+
+    show glovesgotten
+    $ glovessee = True
+    $ venommethod += 1
+    hide glovesgotten
+    hide screen gloves
+
+    jump investigate_1
+
+label hotel:
+
+    hide screen left1
+    hide screen right1 
+
+    if hotelsee == False:
+        "words"
+
+        $ hotelsee == True
+
+        jump investigate_1
+    else:
+        "words"
+
+        jump investigate_1
+
+label arches:
+
+    hide screen left1
+    hide screen right1
+
+    if archessee == False:
+        "words"
+
+        $ archessee == True
+
+        jump investigate_1
+    else:
+        "words"
+
+        jump investigate_1
+
+label fairylights:
+
+    hide screen left1
+    hide screen right1
+
+    if fairylightssee == False:
+        "words"
+
+        $ fairylightssee == True
+
+        jump investigate_1
+    else:
+        "words"
+
+        jump investigate_1
+
+label stones:
+
+    hide screen left1
+    hide screen right1
+
+    if stonessee == False:
+        "words"
+
+        $ stonessee == True
+
+        jump investigate_1
+    else:
+        "words"
+
+        jump investigate_1
+
+label garden:
+
+    hide screen left1
+    hide screen right1
+
+    if gardensee == False:
+        "words"
+
+        $ gardensee == True
+
+        jump investigate_1
+    else:
+        "words"
+
+        jump investigate_1
+
 label investigate_2:
     
     hide screen left1
     hide screen right1
     hide screen snake
+    hide screen gloves
+    hide screen hotel
+    hide screen garden
+    hide screen stones
+    hide screen arches
+    hide screen gloves
 
     scene investigate 2
 
@@ -703,6 +848,12 @@ label investigate_3:
     hide screen left1
     hide screen right1
     hide screen snake
+    hide screen gloves
+    hide screen hotel
+    hide screen garden
+    hide screen stones
+    hide screen arches
+    hide screen gloves
 
     scene investigate 3
 
@@ -717,29 +868,10 @@ label investigate_3:
     show screen left3
     call screen right3 
 
-label gloves:
-
-    hide screen left3
-    hide screen right3
-
-    if glovessee == False:
-        
-        "words"
-
-        show glovesgotten
-        $ glovessee = True
-        $ venommethod += 1
-        hide glovesgotten
-    else:
-        "Those can definately come in handy. There's no better tool for some assassins then the one that gets rid of fingerprints."
-
-        jump investigate_3
-
 label investigate_4:
 
     hide screen left3
     hide screen right3
-    hide screen gloves
 
     scene investigate 4
 
@@ -762,6 +894,11 @@ label investigate_leave:
         "No, there's still more to find around here.":
             jump investiage_1
 
+    hide screen hotel
+    hide screen garden
+    hide screen stones
+    hide screen arches
+    hide screen gloves
     hide screen left1
     hide screen right1
     hide screen snake
