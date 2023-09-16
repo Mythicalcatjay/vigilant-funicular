@@ -625,29 +625,88 @@ label gloves:
     hide screen left1
     hide screen right1
       
+    hide morningstar
+    show morningstar red rbf at my_right
+    hide dick
+    show dick red smile open at my_left, speak
+
     d "Look at what the cat dragged in!"
+
+    hide dick
+    show dick red open at my_left, speak
 
     d "Or more accurately what a lazy landscaper left."
 
+    hide dick
+    show dick red smile at my_left
+    hide morningstar
+    show morningstar red o at my_right, speak
+
     m "You look too excited to see just a pair of fucking gloves."
+
+    hide morningstar
+    show morningstar red rbf at my_right
+    hide dick
+    show dick red smile open at my_left, speak
 
     d "Why wouldn't I be? They're one of our best tools for any job."
 
+    hide dick
+    show dick red smile at my_left
+    hide morningstar
+    show morningstar red frown at my_right, speak
+
     m "..."
+
+    hide morningstar
+    show morningstar red frown at my_right
+    hide dick
+    show dick red neutral at my_left
 
     "Her gaze showed she clearly did not agree."
 
+    hide morningstar
+    show morningstar red frown open at my_right, speak
+    hide dick
+    show dick red smile open at my_left
+
     m "Aren't you already wearing gloves though?"
+
+    hide morningstar
+    show morningstar red frown at my_right
+    hide dick
+    show dick red smile open at my_left, speak
 
     d "Yes, but, these are rubber and mine are just cloth. They're protective and textured."
 
+    hide dick
+    show dick red open at my_left, speak
+
     d "Plus, you aren't wearing any."
+
+    hide morningstar
+    show morningstar red shock at my_right
+    hide dick
+    show dick red smile at my_left
 
     "Her face twisted at even just the thought of putting them on."
 
+    hide morningstar
+    show morningstar red frown open at my_right, speak
+    hide dick
+    show dick red smile at my_left
+
     m "I'd rather cut my palm open."
 
+    hide morningstar
+    show morningstar red frown at my_right
+    hide dick
+    show dick red rbf at my_left
+
     "Dick wasn't impressed, but still stowed them away just in case she needed them later or if he may need an upgrade."
+
+    hide morningstar
+    hide dick
 
     show glovesgotten
     $ glovessee = True
@@ -679,13 +738,52 @@ label arches:
     hide screen right1
 
     if archessee == False:
-        "words"
+        m "They have way too many of those."
+
+
+
+        d "Well, if you're rich, why not live in excess?"
+
+
+
+        m "They aren't even real, though. It's garbage."
+
+
+
+        "Dick couldn't deny that, the leaves only looked faker next to the real thing only feet away. It was too obvious to the point of being distracting."
+
+
+
+        d "Maybe it's expensive garbage, at least? Could be nicer then you assume."
+
+
+
+        "She wasn't impressed."
+
+
+
+        d "I'm trying to be respectful, there are always worse they could do."
+
+
+
+        m "Just say it looks like shit and move on."
+
+
+
+        d "Fine, it looks like shit."
+
+
+
+        "He looked somewhere between relieved and liked he had to force himself to say it."
+
+        hide morningstar
+        hide dick
 
         $ archessee == True
 
         jump investigate_1
     else:
-        "words"
+        "Fake plastic arches."
 
         jump investigate_1
 
@@ -695,13 +793,24 @@ label fairylights:
     hide screen right1
 
     if fairylightssee == False:
-        "words"
+        d "Aren't those a bit redundant? It's about 7 in the morning."
+
+        m "It would be enteratining if someone broke one of those?"
+
+        m "The glass everywhere and electricity would be dangerous on those arches."
+
+        d "That's not quite what I consider entertaining but if we are still here and it's dark outside than you can break one."
+
+        "She looked a little too excited at that proposition."
+
+        hide morningstar
+        hide dick
 
         $ fairylightssee == True
 
         jump investigate_1
     else:
-        "words"
+        "Those are just a waste of electricity."
 
         jump investigate_1
 
@@ -729,6 +838,9 @@ label stones:
 
         "She looked perhaps too happy about that."
 
+        hide morningstar
+        hide dick
+
         $ stonessee == True
 
         jump investigate_1
@@ -744,6 +856,9 @@ label garden:
 
     if gardensee == False:
         "words"
+
+        hide morningstar
+        hide dick
 
         $ gardensee == True
 
