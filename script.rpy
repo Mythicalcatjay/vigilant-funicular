@@ -248,7 +248,7 @@ label game_start:
 
         fd = fd.strip() 
         
-        if not fd.strip or fd == "Dick" or fd == "":
+        if not fd.strip or fd == "Dick" or fd == "dick" or fd == "":
             fd = "Mickey"
 
         if fd == "Austin" or fd == "austin" or fd == "Austin Powers" or fd == "austin danger powers" or fd == "austin powers" or fd == "Austin Danger Powers":
@@ -711,13 +711,29 @@ label stones:
     hide screen right1
 
     if stonessee == False:
-        "words"
+        d "That's stylish I guess, you don't normally see that outside of private residences much."
+
+        m "Because it's a great way to get put on a hitlist by someone in a wheelchair."
+
+        d "Touche, touche."
+
+        d "Can't they be fined miserably for it?"
+
+        m "I think rich people like it too much to matter."
+
+        d "It's a chain, they'll probably have to change it."
+
+        d "Maybe when we get back we can report it, truly hurt them."
+
+        m "The hotel owner will want to die."
+
+        "She looked perhaps too happy about that."
 
         $ stonessee == True
 
         jump investigate_1
     else:
-        "words"
+        "Those still look like a fall hazard."
 
         jump investigate_1
 
