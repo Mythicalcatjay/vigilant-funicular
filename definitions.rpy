@@ -158,42 +158,38 @@ define rsmovement = MoveTransition(
 
 # Image Buttons
 
-screen left1:
+screen arrows1:
         imagebutton:
             xalign 0.0
             yalign 0.5
             idle "buttons/arrow_left.png"
             action Jump("investigate_2")
-
-screen right1:
         imagebutton:
             xalign 1.0
             yalign 0.5
             idle "buttons/arrow_right.png"
             action Jump("investigate_3")
 
-screen right2:
+screen arrows2:
         imagebutton:
             xalign 1.0
             yalign 0.5
             idle "buttons/arrow_right.png"
             action Jump("investigate_1")
 
-screen left3:
+screen arrows3:
         imagebutton:
             xalign 0.0
             yalign 0.5
             idle "buttons/arrow_left.png"
             action Jump("investigate_1")
-
-screen right3:
         imagebutton:
             xalign 1.0
             yalign 0.5
             idle "buttons/arrow_right.png"
             action Jump("investigate_4")
 
-screen left4:
+screen arrows4:
         imagebutton:
             xalign 0.0
             yalign 0.5
@@ -207,7 +203,50 @@ screen leaveinvestiagte:
             idle "buttons/leave.png"
             action Jump("investigate_leave")
 
-screen snake:
+
+screen invest1:
+    tag menu
+    vbox:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/garden_idle.png"
+            hover "investigate buttons/garden_hover.png"
+            action Jump("garden")
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/arches_idle.png"
+            hover "investigate buttons/arches_hover.png"
+            action Jump("arches")
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/stones_idle.png"
+            hover "investigate buttons/stones_hover.png"
+            action Jump("stones")
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/hotel_idle.png"
+            hover "investigate buttons/hotel_hover.png"
+            action Jump("hotel")
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/fairylights_idle.png"
+            hover "investigate buttons/fairylights_hover.png"
+            action Jump("fairylights")
         imagebutton:
             xanchor 0.5
             yanchor 0.5
@@ -226,46 +265,6 @@ screen gloves:
             idle "investigate buttons/gloves_idle.png"
             hover "investigate buttons/gloves_hover.png"
             action Jump("gloves")
-
-screen hotel:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
-            idle "investigate buttons/hotel_idle.png"
-            hover "investigate buttons/hotel_hover.png"
-            action Jump("hotel")
-
-screen arches:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
-            idle "investigate buttons/arches_idle.png"
-            hover "investigate buttons/arches_hover.png"
-            action Jump("arches")
-
-screen fairylights:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
-            idle "investigate buttons/fairylights_idle.png"
-            hover "investigate buttons/fairylights_hover.png"
-            action Jump("fairylights")
-
-screen stones:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
-            idle "investigate buttons/stones_idle.png"
-            hover "investigate buttons/stones_hover.png"
-            action Jump("stones")
 
 screen purse:
         imagebutton:
