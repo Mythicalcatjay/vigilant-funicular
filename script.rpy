@@ -526,6 +526,13 @@ label investigate_1:
     else:
         pass
 
+    show screen invest1
+
+    if glovessee == False:
+        show screen gloves
+    else:
+        pass
+
     if venommethod == 2:
         show screen leaveinvestiagte
     elif poisonmethod == 1:
@@ -533,14 +540,8 @@ label investigate_1:
     else:
         pass
 
-    if glovessee == false:
-        show screen gloves
-    else:
-        pass
+    call screen arrows1
 
-    show screen arrows1
-    call screen invest1
-        
 label snake:
 
     hide screen arrows1
@@ -608,12 +609,12 @@ label snake:
         $ venommethod += 1
         hide snakegotten
 
-        jump investiage_1
+        jump investigate_1
     else:
         
         "Eugh, that thing isn't moving anytime soon is it? At least if they come up with a plan they don't have to worry about scowering the premises for it."
 
-        jump investiage_1
+        jump investigate_1
 
 label gloves:
 
@@ -720,10 +721,10 @@ label hotel:
     if hotelsee == False:
         "words"
 
+        $ hotelsee == True
+
         hide morningstar
         hide dick        
-
-        $ hotelsee == True
 
         jump investigate_1
     else:
@@ -806,10 +807,10 @@ label arches:
 
         "He looked somewhere between relieved and liked he had to force himself to say it."
 
+        $ archessee == True
+
         hide morningstar
         hide dick
-
-        $ archessee == True
 
         jump investigate_1
     else:
@@ -855,10 +856,10 @@ label fairylights:
 
         "She looked a little too excited at that proposition."
 
+        $ fairylightssee == True
+
         hide morningstar
         hide dick
-
-        $ fairylightssee == True
 
         jump investigate_1
     else:
@@ -937,10 +938,10 @@ label stones:
 
         "She wasn't wrong, but that wasn't quite the point."
 
+        $ stonessee == True
+
         hide morningstar
         hide dick
-
-        $ stonessee == True
 
         jump investigate_1
     else:
@@ -957,10 +958,10 @@ label garden:
     if gardensee == False:
         "words"
 
+        $ gardensee == True
+
         hide morningstar
         hide dick
-
-        $ gardensee == True
 
         jump investigate_1
     else:
@@ -1134,7 +1135,7 @@ label investigate_leave:
         "Yes, it's time to wait to attend the ceremony":
             pass
         "No, there's still more to find around here.":
-            jump investiage_1
+            jump investigate_1
 
     hide screen arrows1
     hide screen arrows2
