@@ -526,12 +526,10 @@ label investigate_1:
     else:
         pass
 
-    show screen invest1
-
     if glovessee == False:
         show screen gloves
     else:
-        pass
+        show screen invest1
 
     if venommethod == 2:
         show screen leaveinvestiagte
@@ -556,7 +554,7 @@ label snake:
 
         hide dick
         show dick red rbf at my_left
-        show morningstar red shock at my_right, speak
+        show morningstar red o at my_right, speak
         with rsmovement
 
         m "Do you know what kind it is?"
@@ -721,7 +719,7 @@ label hotel:
     if hotelsee == False:
         "words"
 
-        $ hotelsee == True
+        $ hotelsee = True
 
         hide morningstar
         hide dick        
@@ -807,7 +805,7 @@ label arches:
 
         "He looked somewhere between relieved and liked he had to force himself to say it."
 
-        $ archessee == True
+        $ archessee = True
 
         hide morningstar
         hide dick
@@ -856,7 +854,7 @@ label fairylights:
 
         "She looked a little too excited at that proposition."
 
-        $ fairylightssee == True
+        $ fairylightssee = True
 
         hide morningstar
         hide dick
@@ -938,7 +936,7 @@ label stones:
 
         "She wasn't wrong, but that wasn't quite the point."
 
-        $ stonessee == True
+        $ stonessee = True
 
         hide morningstar
         hide dick
@@ -958,7 +956,7 @@ label garden:
     if gardensee == False:
         "words"
 
-        $ gardensee == True
+        $ gardensee = True
 
         hide morningstar
         hide dick
@@ -1002,6 +1000,8 @@ label purse:
 
     if heroin == True:
         "Hopefully whoever owns that purse won't miss what was inside."
+
+        jump investigate_2
     else:
         show morningstar red unhinged at my_right, speak
             
