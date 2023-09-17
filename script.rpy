@@ -512,9 +512,9 @@ label pregame:
 
 label investigate_1:
 
-    hide screen left3
-    hide screen right3
-    hide screen right2
+    hide screen arrows3
+    hide screen arrows2
+    hide screen leaveinvestiagte
     hide screen purse
 
     scene investigate 1
@@ -538,19 +538,14 @@ label investigate_1:
     else:
         pass
 
-    show screen hotel
-    show screen garden
-    show screen stones
-    show screen arches
-    show screen snake
-    show screen gloves
-    show screen left1
-    call screen right1
+    show screen arrows1
+    call screen invest1
         
 label snake:
 
-    hide screen left1
-    hide screen right1
+    hide screen arrows1
+    hide screen leaveinvestiagte
+    hide screen invest1
 
     if snakesee == False:
         show dick red pissy at my_left, speak
@@ -622,8 +617,9 @@ label snake:
 
 label gloves:
 
-    hide screen left1
-    hide screen right1
+    hide screen arrows1
+    hide screen leaveinvestiagte
+    hide screen invest1
       
     show dick red smile open at my_left, speak
     with lsmovement      
@@ -717,8 +713,9 @@ label gloves:
 
 label hotel:
 
-    hide screen left1
-    hide screen right1 
+    hide screen arrows1
+    hide screen leaveinvestiagte
+    hide screen invest1
 
     if hotelsee == False:
         "words"
@@ -736,8 +733,9 @@ label hotel:
 
 label arches:
 
-    hide screen left1
-    hide screen right1
+    hide screen arrows1
+    hide screen leaveinvestiagte
+    hide screen invest1
 
     if archessee == False:
         show morningstar red open at my_right, speak
@@ -821,8 +819,9 @@ label arches:
 
 label fairylights:
 
-    hide screen left1
-    hide screen right1
+    hide screen arrows1
+    hide screen leaveinvestiagte
+    hide screen invest1
 
     if fairylightssee == False:
         show dick red open at my_left, speak
@@ -869,8 +868,9 @@ label fairylights:
 
 label stones:
 
-    hide screen left1
-    hide screen right1
+    hide screen arrows1
+    hide screen leaveinvestiagte
+    hide screen invest1
 
     if stonessee == False:
         show dick red open at my_left, speak
@@ -950,8 +950,9 @@ label stones:
 
 label garden:
 
-    hide screen left1
-    hide screen right1
+    hide screen arrows1
+    hide screen leaveinvestiagte
+    hide screen invest1
 
     if gardensee == False:
         "words"
@@ -969,14 +970,9 @@ label garden:
 
 label investigate_2:
     
-    hide screen left1
-    hide screen right1
-    hide screen snake
-    hide screen gloves
-    hide screen hotel
-    hide screen garden
-    hide screen stones
-    hide screen arches
+    hide screen arrows1
+    hide screen leaveinvestiagte
+    hide screen invest1
     hide screen gloves
 
     scene investigate 2
@@ -988,12 +984,20 @@ label investigate_2:
     else:
         pass
 
+    if venommethod == 2:
+        show screen leaveinvestiagte
+    elif poisonmethod == 1:
+        show screen leaveinvestiagte
+    else:
+        pass
+
     show screen purse
-    call screen right2
+    call screen arrows2
 
 label purse:
 
-    hide screen right2
+    hide screen arrows2
+    hide screen leaveinvestiagte
 
     if heroin == True:
         "Hopefully whoever owns that purse won't miss what was inside."
@@ -1075,14 +1079,10 @@ label money:
 
 label investigate_3:
 
-    hide screen left1
-    hide screen right1
-    hide screen snake
-    hide screen gloves
-    hide screen hotel
-    hide screen garden
-    hide screen stones
-    hide screen arches
+    hide screen arrows1
+    hide screen arrows4
+    hide screen invest1
+    hide screen leaveinvestiagte
     hide screen gloves
 
     scene investigate 3
@@ -1094,14 +1094,19 @@ label investigate_3:
     else:
         pass
 
-    show screen gloves
-    show screen left3
-    call screen right3 
+    if venommethod == 2:
+        show screen leaveinvestiagte
+    elif poisonmethod == 1:
+        show screen leaveinvestiagte
+    else:
+        pass
+
+    call screen arrows3 
 
 label investigate_4:
 
-    hide screen left3
-    hide screen right3
+    hide screen arrows3
+    hide screen leaveinvestiagte
 
     scene investigate 4
 
@@ -1112,7 +1117,14 @@ label investigate_4:
     else:
         pass
 
-    call screen left4
+    if venommethod == 2:
+        show screen leaveinvestiagte
+    elif poisonmethod == 1:
+        show screen leaveinvestiagte
+    else:
+        pass
+
+    call screen arrows4
 
 label investigate_leave:
 
@@ -1124,16 +1136,13 @@ label investigate_leave:
         "No, there's still more to find around here.":
             jump investiage_1
 
-    hide screen hotel
-    hide screen garden
-    hide screen stones
-    hide screen arches
-    hide screen gloves
-    hide screen left1
-    hide screen right1
-    hide screen snake
+    hide screen arrows1
+    hide screen arrows2
+    hide screen arrows3
+    hide screen arrows4
+    hide screen invest1
     hide screen leaveinvestiagte
-    hide investiage 1
+    scene black
 
     "It didn't take too long waiting for the other guests to arrive. They were able to bide their time for the ceremony without much of a fuss."
 
