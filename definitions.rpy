@@ -104,6 +104,9 @@ image cg2 = "cgs/cg2.png"
 
 image investigate 1 = "backgrounds/investigate 1.png"
 
+
+image mingle 1 = "backgrounds/mingle 1.png"
+
 # Info Pictures
 
 image snakegotten = "info/placeholder.png"
@@ -203,7 +206,6 @@ screen leaveinvestiagte:
             idle "buttons/leave.png"
             action Jump("investigate_leave")
 
-
 screen invest1:
     tag menu
     vbox:
@@ -247,11 +249,49 @@ screen invest1:
             action Jump("snake")
 
 screen gloves:
+    tag menu
+    vbox:
+        xalign 0.0
+        yalign 0.0
         imagebutton:
-            xanchor 0.0
-            yanchor 0.0
-            xpos 1.5
-            ypos 1.0
+            xpos 780
+            ypos 0.0
+            idle "investigate buttons/garden_idle.png"
+            hover "investigate buttons/garden_hover.png"
+            action Jump("garden")
+        imagebutton:
+            xpos 0.0
+            ypos -920
+            idle "investigate buttons/arches_idle.png"
+            hover "investigate buttons/arches_hover.png"
+            action Jump("arches")
+        imagebutton:
+            xpos 1230
+            ypos -1110
+            idle "investigate buttons/stones_idle.png"
+            hover "investigate buttons/stones_hover.png"
+            action Jump("stones")
+        imagebutton:
+            xpos 1500
+            ypos -2550
+            idle "investigate buttons/hotel_idle.png"
+            hover "investigate buttons/hotel_hover.png"
+            action Jump("hotel")
+        imagebutton:
+            xpos 0.0
+            ypos -3540
+            idle "investigate buttons/fairylights_idle.png"
+            hover "investigate buttons/fairylights_hover.png"
+            action Jump("fairylights")
+        imagebutton:
+            xpos 1.112
+            ypos -3251
+            idle "investigate buttons/snake_idle.png"
+            hover "investigate buttons/snake_hover.png"
+            action Jump("snake")
+        imagebutton:
+            xpos 0.775
+            ypos -3670
             idle "investigate buttons/gloves_idle.png"
             hover "investigate buttons/gloves_hover.png"
             action Jump("gloves")
