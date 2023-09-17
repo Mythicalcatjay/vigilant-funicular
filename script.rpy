@@ -625,10 +625,8 @@ label gloves:
     hide screen left1
     hide screen right1
       
-    hide morningstar
-    show morningstar red rbf at my_right
-    hide dick
     show dick red smile open at my_left, speak
+    with lsmovement      
 
     d "Look at what the cat dragged in!"
 
@@ -641,6 +639,7 @@ label gloves:
     show dick red smile at my_left
     hide morningstar
     show morningstar red o at my_right, speak
+    with rsmovement
 
     m "You look too excited to see just a pair of fucking gloves."
 
@@ -724,6 +723,9 @@ label hotel:
     if hotelsee == False:
         "words"
 
+        hide morningstar
+        hide dick        
+
         $ hotelsee == True
 
         jump investigate_1
@@ -738,41 +740,71 @@ label arches:
     hide screen right1
 
     if archessee == False:
+        show morningstar red open at my_right, speak
+        with rsmovement
+
         m "They have way too many of those."
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        show dick red smile open at my_left, speak
+        with lsmovement
 
         d "Well, if you're rich, why not live in excess?"
 
-
+        hide morningstar
+        show morningstar red open at my_right, speak
+        hide dick
+        show dick red smile at my_left
 
         m "They aren't even real, though. It's garbage."
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red smile at my_left
 
         "Dick couldn't deny that, the leaves only looked faker next to the real thing only feet away. It was too obvious to the point of being distracting."
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red smile open at my_left, speak
 
         d "Maybe it's expensive garbage, at least? Could be nicer then you assume."
 
-
+        hide morningstar
+        show morningstar red frown at my_right
+        hide dick
+        show dick red neutral at my_left
 
         "She wasn't impressed."
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
 
         d "I'm trying to be respectful, there are always worse they could do."
 
-
+        hide morningstar
+        show morningstar red frown open at my_right, speak
+        hide dick
+        show dick red frown at my_left
 
         m "Just say it looks like shit and move on."
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red frown open at my_left, speak
 
         d "Fine, it looks like shit."
 
-
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red frown at my_left
 
         "He looked somewhere between relieved and liked he had to force himself to say it."
 
@@ -793,13 +825,34 @@ label fairylights:
     hide screen right1
 
     if fairylightssee == False:
+        show dick red open at my_left, speak
+        with lsmovement
+
         d "Aren't those a bit redundant? It's about 7 in the morning."
+
+        hide dick
+        show dick red neutral at my_left
+        show morningstar red smile open at my_right, speak
+        with rsmovement
 
         m "It would be enteratining if someone broke one of those?"
 
+        hide morningstar
+        show morningstar red unhinged at my_right, speak
+
         m "The glass everywhere and electricity would be dangerous on those arches."
 
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red open at my_left, speak
+
         d "That's not quite what I consider entertaining but if we are still here and it's dark outside than you can break one."
+
+        hide morningstar
+        show morningstar red unhinged at my_right
+        hide dick
+        show dick red open at my_left, tremble
 
         "She looked a little too excited at that proposition."
 
@@ -820,23 +873,69 @@ label stones:
     hide screen right1
 
     if stonessee == False:
+        show dick red open at my_left, speak
+        with lsmovement
+
         d "That's stylish I guess, you don't normally see that outside of private residences much."
+
+        hide dick
+        show dick red neutral at my_left
+        show morningstar red o at my_right, speak
+        with rsmovement
 
         m "Because it's a great way to get put on a hitlist by someone in a wheelchair."
 
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red frown open at my_left, speak
+
         d "Touche, touche."
+
+        hide dick
+        show dick red open at my_left, speak
 
         d "Can't they be fined miserably for it?"
 
-        m "I think rich people like it too much to matter."
+        hide morningstar
+        show morningstar red open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
-        d "It's a chain, they'll probably have to change it."
+        m "Probably."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
+
+        d "Well that's good."
+
+        hide dick
+        show dick red smile open at my_left, speak
 
         d "Maybe when we get back we can report it, truly hurt them."
 
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red smile at my_left
+
+        "Morningstar's eyes seemed to glitter."
+
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
+
         m "The hotel owner will want to die."
 
-        "She looked perhaps too happy about that."
+        hide morningstar
+        show morningstar red smile at my_right, speak
+        hide dick
+        show dick red rbf at my_left
+
+        "She wasn't wrong, but that wasn't quite the point."
 
         hide morningstar
         hide dick
