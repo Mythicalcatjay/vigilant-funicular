@@ -207,61 +207,51 @@ screen leaveinvestiagte:
 screen invest1:
     tag menu
     vbox:
+        xalign 0.0
+        yalign 0.0
         imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
+            xpos 780
+            ypos 0.0
             idle "investigate buttons/garden_idle.png"
             hover "investigate buttons/garden_hover.png"
             action Jump("garden")
         imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
+            xpos 0.0
+            ypos -920
             idle "investigate buttons/arches_idle.png"
             hover "investigate buttons/arches_hover.png"
             action Jump("arches")
         imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
+            xpos 1230
+            ypos -1110
             idle "investigate buttons/stones_idle.png"
             hover "investigate buttons/stones_hover.png"
             action Jump("stones")
         imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
+            xpos 1500
+            ypos -2550
             idle "investigate buttons/hotel_idle.png"
             hover "investigate buttons/hotel_hover.png"
             action Jump("hotel")
         imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
+            xpos 0.0
+            ypos -3540
             idle "investigate buttons/fairylights_idle.png"
             hover "investigate buttons/fairylights_hover.png"
             action Jump("fairylights")
         imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
+            xpos 1.112
+            ypos -3251
             idle "investigate buttons/snake_idle.png"
             hover "investigate buttons/snake_hover.png"
             action Jump("snake")
 
 screen gloves:
         imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.28
+            xanchor 0.0
+            yanchor 0.0
+            xpos 1.5
+            ypos 1.0
             idle "investigate buttons/gloves_idle.png"
             hover "investigate buttons/gloves_hover.png"
             action Jump("gloves")
