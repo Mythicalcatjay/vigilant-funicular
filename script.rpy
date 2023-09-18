@@ -254,6 +254,9 @@ label game_start:
         if fd == "Austin" or fd == "austin" or fd == "Austin Powers" or fd == "austin danger powers" or fd == "austin powers" or fd == "Austin Danger Powers":
             renpy.jump("austin_powers")
 
+        if fd == "Shithole" or fd == "shithole":
+            renpy.jump("shithole")
+
     d "[fd]."
 
     hide dick
@@ -295,6 +298,25 @@ label game_start:
     hide morningstar
     show morningstar open at my_right, speak
     
+    jump morningstar_name
+
+label shithole:
+    d "[fd]."
+
+    hide dick
+    show dick 1 50 smile at my_left
+    hide morningstar
+    show morningstar frown at my_right
+
+    "Morningstar looked at him with the eyes of a game developer who really wanted to throttle her friends."
+
+    hide morningstar
+    show morningstar frown open at my_right, speak
+
+    m "Fuck off."
+
+    $ fd = "Mickey"
+
     jump morningstar_name
 
 label austin_powers:
@@ -624,7 +646,7 @@ label gloves:
     hide screen leaveinvestiagte
     hide screen invest1
     hide screen gloves
-      
+
     show dick red smile open at my_left, speak
     with lsmovement      
 
@@ -1042,12 +1064,12 @@ label garden:
         hide morningstar
         show morningstar red rbf at my_right
         hide dick
-        show dick red open at my_left
+        show dick red open at my_left, speak
 
         d "Normally you'd see a nice variety of stuff, but this is all just so cookie cutter."
 
         hide morningstar
-        show morningstar red frown open at my_right
+        show morningstar red frown open at my_right,speak
         hide dick
         show dick red neutral at my_left
 
@@ -1058,6 +1080,10 @@ label garden:
         hide dick
         show dick red neutral at my_left
         with Pause (1.0)
+        show dick red frown at my_left
+        with Pause (0.5)
+        show dick red open at my_left
+        with Pause (0.5)
         show dick red pissy at my_left, speak
 
         d "And the bush isn't even cut right..."
@@ -1068,7 +1094,7 @@ label garden:
         d "That's just depressing. Maybe their landscaper was interrupted midway?"
 
         hide morningstar
-        show morningstar red open at my_right
+        show morningstar red open at my_right, speak
         hide dick
         show dick red frown at my_left
 
@@ -1279,7 +1305,5 @@ label end:
     # Just a little message to keep you in check.
 
     "This is the end of the demo you are playing."
-
-    # This ends the game.
 
     return
