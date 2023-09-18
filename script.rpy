@@ -545,6 +545,7 @@ label snake:
     hide screen arrows1
     hide screen leaveinvestiagte
     hide screen invest1
+    hide screen gloves
 
     if snakesee == False:
         show dick red pissy at my_left, speak
@@ -603,8 +604,11 @@ label snake:
         hide dick
 
         show snakegotten
+        pause
         $ snakesee = True
         $ venommethod += 1
+        $ items += 1
+        $ interactions += 1                
         hide snakegotten
 
         jump investigate_1
@@ -619,6 +623,7 @@ label gloves:
     hide screen arrows1
     hide screen leaveinvestiagte
     hide screen invest1
+    hide screen gloves
       
     show dick red smile open at my_left, speak
     with lsmovement      
@@ -632,7 +637,6 @@ label gloves:
 
     hide dick
     show dick red smile at my_left
-    hide morningstar
     show morningstar red o at my_right, speak
     with rsmovement
 
@@ -705,6 +709,8 @@ label gloves:
     show glovesgotten
     $ glovessee = True
     $ venommethod += 1
+    $ items += 1
+    $ interactions += 1
     hide glovesgotten
     hide screen gloves
 
@@ -715,18 +721,78 @@ label hotel:
     hide screen arrows1
     hide screen leaveinvestiagte
     hide screen invest1
+    hide screen gloves
 
     if hotelsee == False:
-        "words"
+        show morningstar red open at my_right, speak
+        with rsmovement
+
+        m "I feel like hotel wedding screams more trashy then fancy to me."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        show dick red smile open at my_left, speak
+        with lsmovement   
+
+        d "Depends on how many stars it has. Less then 3, trashy, but 4 or 5 is riding high."
+
+        hide morningstar
+        show morningstar red open at my_right, speak
+
+        m "It looks like a-"
+
+        hide morningstar
+        show morningstar red shock at my_right
+        hide dick
+        show dick red smile open at my_left, speak, jitters
+
+        d "This one's a nice one: multiple pools, hot tubs, a personal jacuzzi..."
+
+        hide morningstar
+        show morningstar red frown at my_right
+
+        "It didn't even look like Dick was listening to a word Morningstar said."
+
+        hide morningstar
+        show morningstar red frown open at my_right, speak
+
+        m "Ground control to Major Tom."
+
+        hide morningstar
+        show morningstar red frown at my_right
+
+        d "A day spa, they probably even have some specialty bath products, constant roomservice that means you can have as many towels as you want..."
+
+        hide morningstar
+        show morningstar red frown at my_right
+        with Pause(1.0)
+        show morningstar red smile at my_right
+        with Pause (1.0)
+        show morningstar red frown at my_right
+
+        m "..."
+
+        hide dick
+        show dick red open at my_left, speak
+
+        d "What did you say?"
+
+        hide morningstar
+        show morningstar red o at my_right, speak
+        hide dick
+        show dick red neutral at my_left
+
+        m "How about we go somewhere else."
 
         $ hotelsee = True
+        $ interactions += 1
 
         hide morningstar
         hide dick        
 
         jump investigate_1
     else:
-        "words"
+        "Looking at the hotel again, maybe it was a good idea to do a pool day, spa day, something day sometime in the near future."
 
         jump investigate_1
 
@@ -735,6 +801,7 @@ label arches:
     hide screen arrows1
     hide screen leaveinvestiagte
     hide screen invest1
+    hide screen gloves
 
     if archessee == False:
         show morningstar red open at my_right, speak
@@ -806,6 +873,7 @@ label arches:
         "He looked somewhere between relieved and liked he had to force himself to say it."
 
         $ archessee = True
+        $ interactions += 1
 
         hide morningstar
         hide dick
@@ -821,6 +889,7 @@ label fairylights:
     hide screen arrows1
     hide screen leaveinvestiagte
     hide screen invest1
+    hide screen gloves
 
     if fairylightssee == False:
         show dick red open at my_left, speak
@@ -855,6 +924,7 @@ label fairylights:
         "She looked a little too excited at that proposition."
 
         $ fairylightssee = True
+        $ interactions += 1
 
         hide morningstar
         hide dick
@@ -870,6 +940,7 @@ label stones:
     hide screen arrows1
     hide screen leaveinvestiagte
     hide screen invest1
+    hide screen gloves
 
     if stonessee == False:
         show dick red open at my_left, speak
@@ -937,6 +1008,7 @@ label stones:
         "She wasn't wrong, but that wasn't quite the point."
 
         $ stonessee = True
+        $ interactions += 1
 
         hide morningstar
         hide dick
@@ -952,18 +1024,65 @@ label garden:
     hide screen arrows1
     hide screen leaveinvestiagte
     hide screen invest1
+    hide screen gloves
 
     if gardensee == False:
-        "words"
+        show dick red open at my_left, speak
+        with lsmovement
+
+        d "How very... HOA."
+
+        hide dick
+        show dick red neutral at my_left
+        show morningstar red open at my_right, speak
+        with rsmovement
+
+        m "What?"
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left
+
+        d "Normally you'd see a nice variety of stuff, but this is all just so cookie cutter."
+
+        hide morningstar
+        show morningstar red frown open at my_right
+        hide dick
+        show dick red neutral at my_left
+
+        m "And the bush isn't even cut right."
+
+        hide morningstar
+        show morningstar red frown at my_right
+        hide dick
+        show dick red neutral at my_left
+        with Pause (1.0)
+        show dick red pissy at my_left, speak
+
+        d "And the bush isn't even cut right..."
+
+        hide dick
+        show dick red open at my_left, speak
+
+        d "That's just depressing. Maybe their landscaper was interrupted midway?"
+
+        hide morningstar
+        show morningstar red open at my_right
+        hide dick
+        show dick red frown at my_left
+
+        m "And if he was, maybe he left us some goodies."
 
         $ gardensee = True
+        $ interactions += 1
 
         hide morningstar
         hide dick
 
         jump investigate_1
     else:
-        "words"
+        "Such a drab little thing."
 
         jump investigate_1
 
@@ -1027,15 +1146,18 @@ label purse:
 
         d "Well, someone's looking to party tonight I guess."
 
-        m "I think it's a good idea to keep a hold onto it, not just because it's easy to kill someone with but also it's good blackmail."
+        m "I think it's a good idea to keep a hold onto it, not just because it's possible to kill someone with, but because it's great blackmail."
 
         d "At least I know you aren't crazy enough to try it so I'm up for it."
 
         m "Don't tempt me with a shitty time."
 
         show heroingotten
+        pause
         $ heroin = True
         $ poisonmethod += 1
+        $ items += 1
+        $ interactions += 1
         hide heroingotten
 
         "There's still more inside the purse, so..."
@@ -1055,6 +1177,8 @@ label letter:
     "She pulled it out so both her and Dick could read it."
 
     show letter1
+    pause
+    hide letter1
 
     d "You're right. Maybe we can keep a hold on that too?"
 
@@ -1083,8 +1207,8 @@ label investigate_3:
     hide screen arrows1
     hide screen arrows4
     hide screen invest1
-    hide screen leaveinvestiagte
     hide screen gloves
+    hide screen leaveinvestiagte
 
     scene investigate 3
 
@@ -1142,6 +1266,7 @@ label investigate_leave:
     hide screen arrows3
     hide screen arrows4
     hide screen invest1
+    hide screen gloves
     hide screen leaveinvestiagte
     scene black
 
