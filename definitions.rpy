@@ -103,9 +103,15 @@ image cg2 = "cgs/cg2.png"
 # BGs
 
 image investigate 1 = "backgrounds/investigate 1.png"
-
+image investigate 1 gloves= "backgrounds/investigate 1 gloves.png"
+image investigate 2 = "backgrounds/investigate 2.png"
+image investigate 3 = "backgrounds/investigate 3.png"
+image investigate 4 = "backgrounds/investigate 4.png"
 
 image mingle 1 = "backgrounds/mingle 1.png"
+image mingle 2 = "backgrounds/mingle 2.png"
+image mingle 3 = "backgrounds/mingle 3.png"
+image mingle 4 = "backgrounds/mingle 4.png"
 
 # Info Pictures
 
