@@ -17,6 +17,10 @@ label start:
     $ fairylightssee = False
     $ stonessee = False
 
+    $ aislesee = False
+    $ altersee = False
+    $ benchessee = False
+
     $ mingle1 = False
     $ mingle2 = False
     $ mingle3 = False
@@ -30,6 +34,15 @@ label start:
     $ heroin = False
     $ cokehabit = False
     $ poisonmethod = 0
+
+    $ malemale = False
+    $ femalefemale = False
+    $ faultylights = False
+    $ affair = False
+    $ affairsnitch = False
+    $ heroinsnitch = False
+    $ bridetrust = False
+    $ electricmethod = 0
 
     $ items = 0
     $ interactions = 0
@@ -539,7 +552,12 @@ label investigate_1:
     hide screen leaveinvestiagte
     hide screen purse
 
-    scene investigate 1
+    if glovessee == False:
+        show screen gloves
+        scene investigate 1 gloves
+    else:
+        show screen invest1
+        scene investigate 1        
 
     if investigate1 == False:
         "It didn't take long to get to the venue, a rented hotel with an outdoor setup. Just about everyone was busy doing things like getting ready, the perfect chance to poke around."
@@ -548,14 +566,11 @@ label investigate_1:
     else:
         pass
 
-    if glovessee == False:
-        show screen gloves
-    else:
-        show screen invest1
-
     if venommethod == 2:
         show screen leaveinvestiagte
     elif poisonmethod == 1:
+        show screen leaveinvestiagte
+    elif electricmethod >= 4:
         show screen leaveinvestiagte
     else:
         pass
@@ -1119,10 +1134,11 @@ label investigate_2:
     hide screen invest1
     hide screen gloves
 
-    scene investigate 2
+    show screen invest2
+    scene investigate 2    
 
     if investigate2 == False:
-        "The ceremony area was pretty cute. Extremely uncomfortable looking, though. Hopefully, the ceremony wouldn't take long so it can be remembered as cute."
+        "The ceremony area was somewhat cute, but a little claustrophobic despite being in such an open field. It was a strange vibe."
         
         $ investigate2 = True 
     else:
@@ -1142,6 +1158,7 @@ label purse:
 
     hide screen arrows2
     hide screen leaveinvestiagte
+    hide screen invest2
 
     if heroin == True:
         "Hopefully whoever owns that purse won't miss what was inside."
@@ -1149,6 +1166,7 @@ label purse:
         jump investigate_2
     else:
         show morningstar red unhinged at my_right, speak
+        with rsmovement
             
         m "Don't mind if I do!"
 
@@ -1227,6 +1245,51 @@ label money:
     m  "If you can find a way to kill someone using only paper money, I'll be impressed beyond words."
 
     jump investigate_2
+
+label aisle:
+
+    hide screen arrows2
+    hide screen leaveinvestiagte
+    hide screen invest2
+
+    if aislesee == True:
+        "words"
+
+        jump investigate_2
+    else:
+        "words"
+
+        jump investigate_2
+
+label alter:
+
+    hide screen arrows2
+    hide screen leaveinvestiagte
+    hide screen invest2
+
+    if altersee == True:
+        "words"
+
+        jump investigate_2
+    else:
+        "words"
+
+        jump investigate_2
+
+label benches:
+
+    hide screen arrows2
+    hide screen leaveinvestiagte
+    hide screen invest2
+
+    if benchessee == True:
+        "words"
+
+        jump investigate_2
+    else:
+        "words"
+
+        jump investigate_2
 
 label investigate_3:
 
