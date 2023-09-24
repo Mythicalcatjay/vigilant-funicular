@@ -302,12 +302,68 @@ screen gloves:
             hover "investigate buttons/gloves_hover.png"
             action Jump("gloves")
 
-screen purse:
+screen invest2:
+    tag menu
+    vbox:
+        xalign 0.0
+        yalign 0.0
         imagebutton:
-            xanchor 0.5
-            yanchor 0.5
+            xpos 50
+            ypos 315
+            idle "investigate buttons/alter_idle.png"
+            hover "investigate buttons/alter_hover.png"
+            action Jump("alter")
+        imagebutton:
+            xpos 80
+            ypos 210
+            idle "investigate buttons/aisle_idle.png"
+            hover "investigate buttons/aisle_hover.png"
+            action Jump("aisle")
+        imagebutton:
+            xpos 0
+            ypos -890
+            idle "investigate buttons/benches1_idle.png"
+            hover "investigate buttons/benches1_hover.png"
+            action Jump("benches")
+            imagebutton:
+            xpos 0
+            ypos -890
+            idle "investigate buttons/benches2_idle.png"
+            hover "investigate buttons/benches2_hover.png"
+            action Jump("benches")
+        imagebutton:
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/malemale_idle.png"
+            hover "investigate buttons/malemale_hover.png"
+            action Jump("malemale")
+        imagebutton:
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/extension_idle.png"
+            hover "investigate buttons/extension_hover.png"
+            action Jump("extension")
+        imagebutton:
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/arches2_idle.png"
+            hover "investigate buttons/arches2_hover.png"
+            action Jump("arches")
+        imagebutton:
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/arches3_idle.png"
+            hover "investigate buttons/arches3_hover.png"
+            action Jump("arches")
+        imagebutton:
             xpos 0.5
             ypos 0.28
             idle "investigate buttons/purse_idle.png"
             hover "investigate buttons/purse_hover.png"
             action Jump("purse")
+        imagebutton:
+            xpos 0.5
+            ypos 0.28
+            idle "investigate buttons/fairylights2_idle.png"
+            hover "investigate buttons/fairylights2_hover.png"
+            action Jump("fairylights")
