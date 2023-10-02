@@ -325,7 +325,7 @@ screen invest2:
             idle "investigate buttons/benches1_idle.png"
             hover "investigate buttons/benches1_hover.png"
             action Jump("benches")
-            imagebutton:
+        imagebutton:
             xpos 0
             ypos -890
             idle "investigate buttons/benches2_idle.png"
