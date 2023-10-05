@@ -20,6 +20,7 @@ label start:
     $ aislesee = False
     $ altersee = False
     $ benchessee = False
+    $ extensionsee = False
 
     $ mingle1 = False
     $ mingle2 = False
@@ -374,6 +375,14 @@ label austin_powers:
 
     jump morningstar_name
 
+label james_bond:
+
+label twilight:
+
+label agent_47:
+
+label dexter_morgan:
+
 label morningstar_name:
 
     python:
@@ -472,6 +481,14 @@ label felicity_shagwell:
 
     jump pregame
 
+label pussy_galore:
+
+label yor:
+
+label black_widow:
+
+label the_bride:
+
 label pregame:
 
     hide morningstar
@@ -543,6 +560,7 @@ label pregame:
 
     menu:
         "Leave to investigate the venue.":
+            $ persistent.opening_done = True
             jump investigate_1
 
 label investigate_1:
@@ -1148,10 +1166,11 @@ label investigate_2:
         show screen leaveinvestiagte
     elif poisonmethod == 1:
         show screen leaveinvestiagte
+    elif electricmethod >= 4:
+        show screen leaveinvestiagte
     else:
         pass
 
-    show screen purse
     call screen arrows2
 
 label purse:
@@ -1286,8 +1305,183 @@ label benches:
         "words"
 
         jump investigate_2
+    elif heroin == True:
+        "words"
+
+        jump investigate_2
     else:
         "words"
+
+        jump investigate_2
+
+label extension:
+
+    hide screen arrows2
+    hide screen leaveinvestiagte
+    hide screen invest2
+
+    if extensionsee == True:
+        "words"
+
+        jump investigate_2
+    else:
+        "words"
+
+        jump investigate_2
+
+label malemale:
+
+    hide screen arrows2
+    hide screen leaveinvestiagte
+    hide screen invest2
+
+    if malemale == True:
+        "words"
+
+        jump investigate_2
+    elif heroin == True:
+        "words"
+
+        jump investigate_2
+    else:
+        "words"
+
+        jump investigate_2
+
+label arches2:
+
+    hide screen arrows2
+    hide screen leaveinvestiagte
+    hide screen invest2
+
+    if archessee == False:
+        show morningstar red open at my_right, speak
+        with rsmovement
+
+        m "They have way too many of those."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        show dick red smile open at my_left, speak
+        with lsmovement
+
+        d "Well, if you're rich, why not live in excess?"
+
+        hide morningstar
+        show morningstar red open at my_right, speak
+        hide dick
+        show dick red smile at my_left
+
+        m "They aren't even real, though. It's garbage."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red smile at my_left
+
+        "Dick couldn't deny that, the leaves only looked faker next to the real thing only feet away. It was too obvious to the point of being distracting."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red smile open at my_left, speak
+
+        d "Maybe it's expensive garbage, at least? Could be nicer then you assume."
+
+        hide morningstar
+        show morningstar red frown at my_right
+        hide dick
+        show dick red neutral at my_left
+
+        "She wasn't impressed."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
+
+        d "I'm trying to be respectful, there are always worse they could do."
+
+        hide morningstar
+        show morningstar red frown open at my_right, speak
+        hide dick
+        show dick red frown at my_left
+
+        m "Just say it looks like shit and move on."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red frown open at my_left, speak
+
+        d "Fine, it looks like shit."
+
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red frown at my_left
+
+        "He looked somewhere between relieved and liked he had to force himself to say it."
+
+        $ archessee = True
+        $ interactions += 1
+
+        hide morningstar
+        hide dick
+
+        jump investigate_2
+    else:
+        "Fake plastic arches."
+
+        jump investigate_2
+
+label fairylights2:
+
+    hide screen arrows2
+    hide screen leaveinvestiagte
+    hide screen invest2
+
+    if fairylightssee == False:
+        show dick red open at my_left, speak
+        with lsmovement
+
+        d "Aren't those a bit redundant? It's about 7 in the morning."
+
+        hide dick
+        show dick red neutral at my_left
+        show morningstar red smile open at my_right, speak
+        with rsmovement
+
+        m "It would be enteratining if someone broke one of those?"
+
+        hide morningstar
+        show morningstar red unhinged at my_right, speak
+
+        m "The glass everywhere and electricity would be dangerous on those arches."
+
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red open at my_left, speak
+
+        d "That's not quite what I consider entertaining but if we are still here and it's dark outside than you can break one."
+
+        hide morningstar
+        show morningstar red unhinged at my_right
+        hide dick
+        show dick red open at my_left, tremble
+
+        "She looked a little too excited at that proposition."
+
+        $ fairylightssee = True
+        $ interactions += 1
+
+        hide morningstar
+        hide dick
+
+        jump investigate_2
+    else:
+        "Those are just a waste of electricity."
 
         jump investigate_2
 
@@ -1312,6 +1506,8 @@ label investigate_3:
         show screen leaveinvestiagte
     elif poisonmethod == 1:
         show screen leaveinvestiagte
+    elif electricmethod >= 4:
+        show screen leaveinvestiagte
     else:
         pass
 
@@ -1334,6 +1530,8 @@ label investigate_4:
     if venommethod == 2:
         show screen leaveinvestiagte
     elif poisonmethod == 1:
+        show screen leaveinvestiagte
+    elif electricmethod >= 4:
         show screen leaveinvestiagte
     else:
         pass
@@ -1358,6 +1556,7 @@ label investigate_leave:
     hide screen gloves
     hide screen leaveinvestiagte
     scene black
+    $ persistent.investigate_done = True
 
     "It didn't take too long waiting for the other guests to arrive. They were able to bide their time for the ceremony without much of a fuss."
 
