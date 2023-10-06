@@ -265,8 +265,20 @@ label game_start:
         if not fd.strip or fd == "Dick" or fd == "dick" or fd == "":
             fd = "Mickey"
 
-        if fd == "Austin" or fd == "austin" or fd == "Austin Powers" or fd == "austin danger powers" or fd == "austin powers" or fd == "Austin Danger Powers":
+        if fd == "Austin Powers" or fd == "austin danger powers" or fd == "austin powers" or fd == "Austin Danger Powers":
             renpy.jump("austin_powers")
+
+        if fd == "James Bond" or fd == "james bond" or fd == "Bond" or fd == "bond":
+            renpy.jump("james_bond")
+
+        if fd == "Dexter Morgan" or fd == "dexter morgan" or fd == "Kyle Butler" or fd == "kyle butler" or fd == "Jim Lindsey" or fd == "jim lindsey":
+            renpy.jump(dexter_morgan)
+
+        if fd == "Twilight" or fd == "twilight" or fd == "Agent Twilight" or fd == "agent twilight" or fd == "Loid Forger" or fd == "loid forger":
+            renpy.jump(twilight)
+
+        if fd == "Agent 47" or fd == "agent 47" or fd == "Agent Forty-Seven" or fd == "agent forty-seven":
+            renpy.jump("agent_47")
 
         if fd == "Shithole" or fd == "shithole":
             renpy.jump("shithole")
@@ -376,12 +388,73 @@ label austin_powers:
     jump morningstar_name
 
 label james_bond:
+    d "Bond, [fd]."
+
+    "Morningstar looked dumbfounded for a moment."
+
+    m "Holy shit."
+
+    m "You're going to rat us out with the most spy name ever."
+
+    d "Oh come on, you know I have the charisma to pull it off."
+
+    "She stared at him like he grew another head."
+
+    d "Not to you, you're immune with nothing but hate in your heart for my wiles."
+
+    "She snorted. Dick was chuffed with himself that he got her with that one."
+
+    d "Come on, think about Sidney Marlowe."
+
+    m "I don't think that counts."
+
+    d "It does. I single-handedly got her to break up with her boyfriend without any fake cheating allegations after one conversation."
+
+    m "Guess her parents were pretty happy about that."
+
+    d "They were the ones who bribed me to do it."
+
+    m "I think that says more about both of your gullability then anything on you being suave enough to pull off something as absurd as [fd]."
+    d "Just watch me, I mean you can be my Pussy Galore."
+
+    jump morningstar_name
 
 label twilight:
 
 label agent_47:
 
 label dexter_morgan:
+    d "[fd]."
+
+    m "That name just makes you sound like a serial killer."
+
+    d "I have to disagree, but even then, how wrong would it be?"
+
+    m "We're assassins, I think there's a line in there somewhere."
+
+    d "Then what do you think that line is?"
+
+    m "Serial killers have some darkness in them, we don't."
+
+    d "I thought it would just be that we get paid and they just do it for the thrill. Darkness is a little vague though, isn't it?"
+
+    m "You can't see it."
+
+    "She was right, she had her own unique perspective on things. To put it some way other then to name-calling, be that on the positive or negative side."
+
+    m "We're just butchers, things have to die to keep society going even if it's other people."
+
+    d "How vegan."
+
+    m "Oh shut the fuck up. Serial killers just jack off to it and have perpetual screams of danger where ever they go."
+
+    d "I see it, half at least. Too much of sadists and not kosher enough."
+
+    d "What would that make a masochist serial killer then?"
+
+    m "Catholic."
+
+    jump morningstar_name
 
 label morningstar_name:
 
@@ -390,11 +463,23 @@ label morningstar_name:
 
         fm = fm.strip() 
         
-        if not fm.strip or fm == "Morningstar" or fm == "":
+        if not fm.strip or fm == "Morningstar" or fm == "morningstar" or fm == "":
             fm = "Mallory"
 
-        if fm == "Felicity" or fm == "felicity" or fm == "Felicity Shagwell" or fm == "felicity shagwell":
+        if fm == "Felicity Shagwell" or fm == "felicity shagwell":
             renpy.jump("felicity_shagwell")
+
+        if fm == "Pussy Galore" or fm == "pussy galore" or fm == "Pussy" or fm == "pussy":
+            renpy.jump("pussy_galore")
+
+        if fm == "Black Widow" or fm == "black widow" or fm == "Natasha Romanov" or fm == "natasha romanov":
+            renpy.jump("black_widow")
+
+        if fm == "Yor Forger" or fm == "yor forger" or fm == "Thorn Princess" or fm == "thorn princess" or fm == "Yor" or fm == "yor":
+            renpy.jump("yor")
+
+        if fm == "The Bride" or fm == "the bride":
+            renpy.jump("the_bride")
 
     m "I'm going with [fm], like that one pastor's wife with the lopsided boobjob."
 
@@ -482,6 +567,31 @@ label felicity_shagwell:
     jump pregame
 
 label pussy_galore:
+    m "[fm]."
+
+    "That was stupid."
+
+    "That was so, so stupid."
+
+    "Even then after just a few moments they couldn't help but laugh."
+
+    d "How, how do you suppose other people are supposed to refer to you?"
+
+    m "They'll just have to do better then us."
+
+    d "They have to just say /"Hello, P..p.."/"
+
+    d "I can't even do it."
+
+    m "Well I hope you have fun trying to introduce me."
+
+    d "How d-"
+
+    m "Oh come on, don't be a PUSSY."
+
+    "They had to both shut up for a moment and get the rest of the giggles out before they could proceed with normal conversation again."
+
+    jump pregame
 
 label yor:
 
