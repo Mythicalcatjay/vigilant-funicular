@@ -29,7 +29,7 @@ init -2 python:
     custom_pattern = "images/pattern.png"
 
     # A displayable used for the background of everything.
-    custom_background = "images/background.png"
+    custom_background = "images/background_image.png"
 
     # A displayable used for the background of the projects list.
     custom_projects_window = Null()
