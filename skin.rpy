@@ -1,7 +1,7 @@
 ## TUTORIAL: THIS DOES *NOT* GO INTO THE GAME FILES ##
 # 1. Go into your renpy launcher
 # 2. Go into setting and select to open the renpy launcher
-# 3. Open the images, replace the background image with the one I sent
+# 3. Open the images, place the image I sent into the folder and name it "background_image.png"
 # 4. Open the launcher's code.
 # 5. Make a new file where the rest are called "skin.rpy"
 # 6. Copy all of this code into your new file
