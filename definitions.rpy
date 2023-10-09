@@ -98,7 +98,19 @@ image dick blue frown open ="dick/dick blue/frown open.png"
 # CGs
 
 image cg1 = "cgs/cg1.png"
-image cg2 = "cgs/cg2.png"
+
+image cg2 1 2 = "cgs/cg2 1 2.png"
+image cg2 3 = "cgs/cg2 3.png"
+image cg2 4 6 = "cgs/cg2 4 6.png"
+image cg2 5 = "cgs/cg2 5.png"
+image cg2 7 10 12 = "cgs/cg2 7 10 12.png"
+image cg2 8 9 11 = "cgs/cg2 8 9 11.png"
+image cg2 13 14 = "cgs/cg2 13 14.png"
+image cg2 15 = "cgs/cg2 15.png"
+image cg2 16 = "cgs/cg2 16.png"
+image cg2 17 19 = "cgs/cg2 17 19.png"
+image cg2 18 = "cgs/cg2 18.png"
+image cg2 20 = "cgs/cg2 20.png"
 
 # BGs
 
@@ -206,11 +218,10 @@ screen arrows4:
             action Jump("investigate_3")
 
 screen leaveinvestiagte:
-        imagebutton:
-            xalign 0.0
+        hbox:
+            xalign 0.5
             yalign 0.0
-            idle "buttons/leave.png"
-            action Jump("investigate_leave")
+            textbutton "LEAVE" action Jump("investigate_leave")
 
 screen invest1:
     tag menu
@@ -332,29 +343,29 @@ screen invest2:
             hover "investigate buttons/benches2_hover.png"
             action Jump("benches")
         imagebutton:
-            xpos 0.547
-            ypos -2160
-            idle "investigate buttons/malemale_idle.png"
-            hover "investigate buttons/malemale_hover.png"
-            action Jump("malemale")
-        imagebutton:
-            xpos 0.4485
-            ypos -2410
-            idle "investigate buttons/extension_idle.png"
-            hover "investigate buttons/extension_hover.png"
-            action Jump("extension")
-        imagebutton:
             xpos 0.2395
-            ypos -3330
+            ypos -2800
             idle "investigate buttons/arches2_idle.png"
             hover "investigate buttons/arches2_hover.png"
             action Jump("arches2")
         imagebutton:
             xpos 1.038
-            ypos -4685
+            ypos -4155
             idle "investigate buttons/arches3_idle.png"
             hover "investigate buttons/arches3_hover.png"
             action Jump("arches2")
+        imagebutton:
+            xpos 0.547
+            ypos -4950
+            idle "investigate buttons/malemale_idle.png"
+            hover "investigate buttons/malemale_hover.png"
+            action Jump("malemale")
+        imagebutton:
+            xpos 0.4485
+            ypos -5205
+            idle "investigate buttons/extension_idle.png"
+            hover "investigate buttons/extension_hover.png"
+            action Jump("extension")
         imagebutton:
             xpos 0.814
             ypos -5380
