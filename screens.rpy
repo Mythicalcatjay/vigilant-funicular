@@ -309,10 +309,9 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
-        if renpy.get_screen("main_menu"):
-            textbutton _("Gallery") action ShowMenu ("gallery")
+        textbutton _("Gallery") action ShowMenu ("gallery_cgs")
 
-            textbutton _("Achievements") action ShowMenu("achievments")
+        textbutton _("Achievements") action ShowMenu("achievments")
 
         if _in_replay:
 
