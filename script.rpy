@@ -212,7 +212,7 @@ label game_start:
     hide morningstar
     show morningstar smile open at my_right, speak
 
-    m "Her name is (bullshit name), soon to be (bullshittier name). It shouldn't be hard to tell her apart though, unless someone else gets the bright idea to wear white during a wedding."
+    m "Her name is Moira Drew, soon to be Moira Wolfe. It shouldn't be hard to tell her apart though, unless someone else gets the bright idea to wear white during a wedding."
 
     hide morningstar
     show morningstar rbf at my_right
@@ -303,7 +303,7 @@ label game_start:
     hide dick
     show dick 1 50 open at my_left, speak
 
-    d "It's the name of the guy who owns that (type of store) in (other town) and I thought I'd borrow it."
+    d "It's the name of the guy who owns that liqour store in (other town) and I thought I'd borrow it."
 
     hide dick
     show dick 1 50 neutral at my_left
@@ -579,7 +579,7 @@ label pussy_galore:
 
     m "They'll just have to do better then us."
 
-    d "They have to just say /"Hello, P..p.."/"
+    d "They have to just say \"Hello, P..p..\""
 
     d "I can't even do it."
 
@@ -1266,7 +1266,7 @@ label investigate_2:
     scene investigate 2    
 
     if investigate2 == False:
-        "The ceremony area was somewhat cute, but a little claustrophobic despite being in such an open field. It was a strange vibe."
+        "The ceremony area was somewhat cute, but a little claustrophobic despite being in such an open field. It all had an strange energy."
         
         $ investigate2 = True 
     else:
@@ -1301,27 +1301,49 @@ label purse:
 
         hide screen purse
         hide morningstar
-        show cg2
+        show cg2 1 
 
         "Didn't take long for her to get all up in whoever's purse."
 
-        m "I don't think if we took anything out it here it would be missed. This thing is stuffed to the brim with shit."
+        show cg2 3
+
+        m "That's a shit-load of wrappers. How does the owner even remember what's in here?"
+
+        show cg2 1 2
 
         d "Then maybe..."
 
+        show cg2 4 6
+
         m "No."
+
+        show cg2 5
 
         d "I didn't even ask yet."
 
-        m "And I know what you're going to say. But there's something way better then money in here."
+        show cg2 4 6
+
+        m "And I know what you're going to say."
+
+        show cg2 7 10 12
+        
+        m "But there's something way better then money in here."
+    
+        show cg2 8 9 11
 
         "With that she pulls out a little baggie with white powder in it and a needle."
 
         d "Well, someone's looking to party tonight I guess."
 
+        show cg2 7 10 12
+
         m "I think it's a good idea to keep a hold onto it, not just because it's possible to kill someone with, but because it's great blackmail."
 
+        show cg2 8 9 11
+
         d "At least I know you aren't crazy enough to try it so I'm up for it."
+
+        show cg2 7 10 12
 
         m "Don't tempt me with a shitty time."
 
@@ -1333,6 +1355,8 @@ label purse:
         $ interactions += 1
         hide heroingotten
 
+        show cg2 8 9 11
+
         "There's still more inside the purse, so..."
 
         menu:
@@ -1343,9 +1367,15 @@ label purse:
 
 label letter:
 
+    show cg2 13 14
+
     "Inside it was surprisingly barren, execpt for a piece of paper."
 
+    show cg2 15
+
     m "There's something strange in here."
+
+    show cg2 13 14
 
     "She pulled it out so both her and Dick could read it."
 
@@ -1355,6 +1385,8 @@ label letter:
 
     d "You're right. Maybe we can keep a hold on that too?"
 
+    show cg2 16
+
     m "That's probably a good idea."
 
     $ letter += 1
@@ -1363,13 +1395,21 @@ label letter:
 
 label money:
 
+    show cg2 17 19
+
     "There wasn't much inside the wallet that was interesting other then the usual."
 
+    show cg2 18
+
     m "I think we're good unless we want to shovel through gum wrappers."
+
+    show cg2 17 19
 
     d "What about borrowing a few buck there? The owner has heroin, there's always plenty in there that disappears fast."
 
     "She hesitated for a moment before giving his nasty look and a few bills."
+
+    show cg2 20
 
     m  "If you can find a way to kill someone using only paper money, I'll be impressed beyond words."
 
@@ -1386,7 +1426,7 @@ label aisle:
 
         jump investigate_2
     else:
-        "words"
+        "What's a wedding without an aisle, especially one so good at protecting from grass stains? Maybe it would be a bit better if those arches weren't in the way."
 
         jump investigate_2
 
@@ -1401,7 +1441,7 @@ label alter:
 
         jump investigate_2
     else:
-        "words"
+        "The world's most meaningful malformed cube."
 
         jump investigate_2
 
@@ -1415,12 +1455,12 @@ label benches:
         "words"
 
         jump investigate_2
-    elif heroin == True:
+    elif heroin == True or malemale == True:
         "words"
 
         jump investigate_2
     else:
-        "words"
+        "They're fasionable, in some way, but it's unlikely those would be comfortable for a long period of time."
 
         jump investigate_2
 
@@ -1435,7 +1475,7 @@ label extension:
 
         jump investigate_2
     else:
-        "words"
+        "A beautiful wedding, funded by someone hauling ass to a departmet store right before the ceremony."
 
         jump investigate_2
 
@@ -1446,15 +1486,33 @@ label malemale:
     hide screen invest2
 
     if malemale == True:
-        "words"
+        m "I've never seen a cord like that before."
 
-        jump investigate_2
-    elif heroin == True:
-        "words"
+        d "Good, I'd hope not."
+
+        m "What's with that cryptic-ass answer?"
+
+        d "It's a suicide cable, it's because if you plug both ends in it'll cause a fire, electrocute you, or any awful fate inbetween."
+
+        m "Now you're talking."
+
+        d "I don't even know where they got one of these, they're illegal. I know since I got the lovely task of trying to buy one a few years back."
+
+        m "That's weird, still it's a great tool."
+
+        m "Maybe whoever decorated with all those fairylights ordered it from some shady online retailor."
+
+        d "Rich people don't tend to cut corners like that though, they tend to like to go all out, you know? Flex a little, especially at weddings."
+
+        m "I'd never guess since I live with a wannabe."
+
+        d "Oh hush. I think it is smart to put a pin in it that though."
+
+        m "Could be good to bring up in conversation, but i just want to find a way to get the bride to try it out."
 
         jump investigate_2
     else:
-        "words"
+        "The illustrious male-male cable. Just like a male-male seatbelt, trying to use it instead of finding some alternate solution is a fantastic way to get yourself killed."
 
         jump investigate_2
 
@@ -1606,7 +1664,7 @@ label investigate_3:
     scene investigate 3
 
     if investigate3 == False:
-        "words"
+        "Here was the reception area, where everything will fall apart in just a few hours. This might be the most important area here. Plenty of things can go wrong here."
         
         $ investigate3 = True
     else:
@@ -1623,6 +1681,8 @@ label investigate_3:
 
     call screen arrows3 
 
+label unplugged:
+
 label investigate_4:
 
     hide screen arrows3
@@ -1631,7 +1691,7 @@ label investigate_4:
     scene investigate 4
 
     if investigate4 == False:
-        "words"
+        "A hallway, connecting between the wedding area and the rest of the hotel. It's bare in a lot of ways, but in those doors may be something interesting."
 
         $ investigate4 = True
     else:
@@ -1647,6 +1707,10 @@ label investigate_4:
         pass
 
     call screen arrows4
+
+label closet:
+
+label bathrooms:
 
 label investigate_leave:
 
