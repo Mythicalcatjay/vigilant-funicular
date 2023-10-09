@@ -142,8 +142,19 @@ init python:
     gallery.button("cg1")
     gallery.unlock_image("cg1")
 
-    gallery.button("cg2")
-    gallery.unlock_image("cg2")
+    gallery.button("cg2 1 2")
+    gallery.unlock_image("cg2 1 2")
+    gallery.unlock_image("cg2 3")
+    gallery.unlock_image("cg2 4 6")
+    gallery.unlock_image("cg2 5")
+    gallery.unlock_image("cg2 7 10 12")
+    gallery.unlock_image("cg2 8 9 11")
+    gallery.unlock_image("cg2 17 19")
+    gallery.unlock_image("cg2 18")
+    gallery.unlock_image("cg2 20")
+    gallery.unlock_image("cg2 13 14")
+    gallery.unlock_image("cg2 15")
+    gallery.unlock_image("cg2 16")
 
     ############################### BACKGROUNDS ###############################
 
@@ -272,7 +283,7 @@ screen gallery_cgs:
 
         grid 3 3: 
             add gallery.make_button(name="cg1",unlocked= im.Scale("cgs/cg1.png",468,264),locked="dick.png")
-            add gallery.make_button(name="cg2",unlocked= im.Scale("cgs/cg2.png",468,264),locked="dick.png")
+            add gallery.make_button(name="cg2",unlocked= im.Scale("cgs/cg2 1 2.png",468,264),locked="dick.png")
             spacing 15
 
 screen gallery_backgrounds:
