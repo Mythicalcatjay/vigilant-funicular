@@ -7,3 +7,4 @@ From there, import the game files and art assets somewhere in the Ren'py folder.
 When you have everything situated, just open the launcher and it will should have the game in it. 
 Just hit launch project to play the game.
 Have fun! :3 
+* Note the Skins file is completely different. Open that file and follow the directions. 
