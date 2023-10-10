@@ -327,6 +327,7 @@ label game_start:
     jump morningstar_name
 
 label shithole:
+
     d "[fd]."
 
     hide dick
@@ -342,6 +343,11 @@ label shithole:
     m "Fuck off."
 
     $ fd = "Mickey"
+
+    hide dick
+    show dick 1 50 smile at my_left
+    hide morningstar
+    show morningstar open at my_right, speak
 
     jump morningstar_name
 
@@ -388,34 +394,102 @@ label austin_powers:
     jump morningstar_name
 
 label james_bond:
-    d "Bond, [fd]."
+
+    d "Bond, James Bond."
+
+    hide dick
+    show dick 1 50 smile at my_left
+    hide morningstar
+    show morningstar shock at my_right
 
     "Morningstar looked dumbfounded for a moment."
 
+    hide morningstar
+    show morningstar open at my_right, speak
+
     m "Holy shit."
 
-    m "You're going to rat us out with the most spy name ever."
+    hide morningstar
+    show morningstar frown open at my_right, speak
+
+    m "You're going to rat us out with the fakest name ever."
+
+    hide morningstar
+    show morningstar frown at my_right
+    hide dick
+    show dick 1 50 smile open at my_left, speak
 
     d "Oh come on, you know I have the charisma to pull it off."
 
+    hide dick
+    show dick 1 50 smile at my_left
+
     "She stared at him like he grew another head."
+
+    hide dick
+    show dick 1 50 frown open at my_left, speak
 
     d "Not to you, you're immune with nothing but hate in your heart for my wiles."
 
+    hide morningstar
+    show morningstar smile at my_right
+    hide dick
+    show dick 1 50 smile at my_left
+
     "She snorted. Dick was chuffed with himself that he got her with that one."
+
+    hide morningstar
+    show morningstar rbf at my_right
+    hide dick
+    show dick 1 50 smile open at my_left, speak
 
     d "Come on, think about Sidney Marlowe."
 
+    hide morningstar
+    show morningstar o at my_right, speak
+    hide dick
+    show dick 1 50 smile at my_left
+
     m "I don't think that counts."
+
+    hide morningstar
+    show morningstar rbf at my_right
+    hide dick
+    show dick 1 50 open at my_left, speak
 
     d "It does. I single-handedly got her to break up with her boyfriend without any fake cheating allegations after one conversation."
 
+    hide morningstar
+    show morningstar open at my_right, speak
+    hide dick
+    show dick 1 50 neutral at my_left
+
     m "Guess her parents were pretty happy about that."
+
+    hide morningstar
+    show morningstar rbf at my_right
+    hide dick
+    show dick 1 50 smile open at my_left, speak
 
     d "They were the ones who bribed me to do it."
 
+    hide morningstar
+    show morningstar open at my_right, speak
+    hide dick
+    show dick 1 50 neutral at my_left
+
     m "I think that says more about both of your gullability then anything on you being suave enough to pull off something as absurd as [fd]."
-    d "Just watch me, I mean you can be my Pussy Galore."
+    hide morningstar
+    show morningstar shock at my_right
+    hide dick
+    show dick 1 50 smile open at my_left, speak
+
+    d "Just watch me, I mean you can be my... Pussy Galore."
+
+    hide dick
+    show dick 1 50 smile at my_left
+    hide morningstar
+    show morningstar open at my_right, speak
 
     jump morningstar_name
 
@@ -424,35 +498,105 @@ label twilight:
 label agent_47:
 
 label dexter_morgan:
+
     d "[fd]."
+
+    hide morningstar
+    show morningstar o at my_right, speak
+    hide dick
+    show dick 1 50 smile at my_left
 
     m "That name just makes you sound like a serial killer."
 
+    hide morningstar
+    show morningstar rbf at my_right
+    hide dick
+    show dick 1 50 open at my_left, speak
+
     d "I have to disagree, but even then, how wrong would it be?"
+
+    hide morningstar
+    show morningstar open at my_right, speak
+    hide dick
+    show dick 1 50 neutral at my_left
 
     m "We're assassins, I think there's a line in there somewhere."
 
+    hide morningstar
+    show morningstar rbf at my_right
+    hide dick
+    show dick 1 50 open at my_left, speak
+
     d "Then what do you think that line is?"
+
+    hide morningstar
+    show morningstar o at my_right, speak
+    hide dick
+    show dick 1 50 neutral at my_left
 
     m "Serial killers have some darkness in them, we don't."
 
+    hide morningstar
+    show morningstar neutral at my_right
+    hide dick
+    show dick 1 50 smile open at my_left, speak
+
     d "I thought it would just be that we get paid and they just do it for the thrill. Darkness is a little vague though, isn't it?"
+
+    hide morningstar
+    show morningstar o at my_right, speak
+    hide dick
+    show dick 1 50 smile at my_left
 
     m "You can't see it."
 
-    "She was right, she had her own unique perspective on things. To put it some way other then to name-calling, be that on the positive or negative side."
+    hide morningstar
+    show morningstar neutral at my_right, speak
+
+    "She was right, she had her own... unique perspective on things. To put it some way other then to name-calling, be that on the positive or negative side."
+
+    hide morningstar
+    show morningstar open at my_right, speak
 
     m "We're just butchers, things have to die to keep society going even if it's other people."
 
+    hide morningstar
+    show morningstar rbf at my_right
+    hide dick
+    show dick 1 50 smile open at my_left, speak
+
     d "How vegan."
+
+    hide morningstar
+    show morningstar frown open at my_right, speak
+    hide dick
+    show dick 1 50 smile at my_left
 
     m "Oh shut the fuck up. Serial killers just jack off to it and have perpetual screams of danger where ever they go."
 
+    hide morningstar
+    show morningstar rbf at my_right
+    hide dick
+    show dick 1 50 open at my_left, speak
+
     d "I see it, half at least. Too much of sadists and not kosher enough."
 
-    d "What would that make a masochist serial killer then?"
+    hide dick
+    show dick 1 50 smile open at my_left, speak
+
+    d "What would that make a masochist serial killer, then?"
+
+    hide morningstar
+    show morningstar smile open at my_right, speak
+    hide dick
+    show dick 1 50 smile at my_left
 
     m "Catholic."
+
+    hide dick
+    show dick 1 50 smile at my_left
+    hide morningstar
+    show morningstar open at my_right, speak
 
     jump morningstar_name
 
@@ -569,25 +713,78 @@ label felicity_shagwell:
 label pussy_galore:
     m "[fm]."
 
+    hide morningstar
+    show morningstar rbf at my_right
+    hide dick
+    show dick 1 25 open at my_left
+
     "That was stupid."
+
+    hide morningstar
+    show morningstar smile at my_right
+    hide dick
+    show dick 1 25 smile at my_left
 
     "That was so, so stupid."
 
+    hide morningstar
+    show morningstar smile open at my_right, jitters
+    hide dick
+    show dick 1 25 smile open at my_left, jitters
+
     "Even then after just a few moments they couldn't help but laugh."
+
+    hide morningstar
+    show morningstar smile at my_right
+    hide dick
+    show dick 1 25 smile open at my_left, speak
 
     d "How, how do you suppose other people are supposed to refer to you?"
 
+    hide morningstar
+    show morningstar smile open at my_right, speak
+    hide dick
+    show dick 1 25 smile at my_left
+
     m "They'll just have to do better then us."
+
+    hide morningstar
+    show morningstar smile at my_right
+    hide dick
+    show dick 1 25 smile open at my_left, speak
 
     d "They have to just say \"Hello, P..p..\""
 
+    hide morningstar
+    show morningstar smile at my_right
+    hide dick
+    show dick 1 25 pissy at my_left, speak
+
     d "I can't even do it."
+
+    hide morningstar
+    show morningstar smile open at my_right, speak
+    hide dick
+    show dick 1 25 open at my_left
 
     m "Well I hope you have fun trying to introduce me."
 
+    hide morningstar
+    show morningstar smile at my_right
+    hide dick
+    show dick 1 25 pissy at my_left, speak
+
     d "How d-"
 
+    hide morningstar
+    show morningstar unhinged at my_right, speak
+
     m "Oh come on, don't be a PUSSY."
+
+    hide morningstar
+    show morningstar smile open at my_right, jitters
+    hide dick
+    show dick 1 25 smile open at my_left, jitters
 
     "They had to both shut up for a moment and get the rest of the giggles out before they could proceed with normal conversation again."
 
@@ -1301,7 +1498,7 @@ label purse:
 
         hide screen purse
         hide morningstar
-        show cg2 1 
+        show cg2 1 2
 
         "Didn't take long for her to get all up in whoever's purse."
 
@@ -1421,8 +1618,14 @@ label aisle:
     hide screen leaveinvestiagte
     hide screen invest2
 
-    if aislesee == True:
+    if aislesee == False:
         "words"
+
+        $ aislesee = True
+        $ interactions += 1
+
+        hide morningstar
+        hide dick       
 
         jump investigate_2
     else:
@@ -1436,8 +1639,14 @@ label alter:
     hide screen leaveinvestiagte
     hide screen invest2
 
-    if altersee == True:
+    if altersee == False:
         "words"
+
+        $ altersee = True
+        $ interactions += 1
+
+        hide morningstar
+        hide dick       
 
         jump investigate_2
     else:
@@ -1451,12 +1660,69 @@ label benches:
     hide screen leaveinvestiagte
     hide screen invest2
 
-    if benchessee == True:
-        "words"
+    if benchessee == False:
+        show morningstar red open at my_right, speak
+        with rsmovement
+
+        m "Ready for our asses to hurt?"
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        show dick red open at my_left, speak
+        with lsmovement   
+
+        d "Oh hush. They're just benches. You'll be fine."
+
+
+
+        m "Whatever, at least it looks like people who are in the back saved their seats, or at least left random shit there."
+
+
+
+        d "It's a good idea if you're early, especially since most guests trust everyone here."
+
+
+
+        m "Sucks to be them."
+
+
+
+        d "Absolutely, but you can understand why. It's their family members, in-laws, and buisness partners. You want to keep them close."
+
+
+
+        m "No such things as friends here, ey?"
+
+
+
+        d "Of course not."   
+
+        $ benchessee == True
+        $ interactions += 1
+
+        hide morningstar
+        hide dick       
 
         jump investigate_2
     elif heroin == True or malemale == True:
-        "words"
+        show dick red open at my_left, speak
+        with lsmovement   
+
+        d "These were shockingly bountiful."
+
+        hide dick
+        show dick red neutral at my_left
+        show morningstar red open at my_right, speak
+        with rsmovement
+
+        m "I don't know if that makes us sound like thieves or farmers."
+
+
+
+        "He just looked a bit taken aback by that, but it wasn't exactly wrong." 
+
+        hide morningstar
+        hide dick       
 
         jump investigate_2
     else:
@@ -1470,8 +1736,52 @@ label extension:
     hide screen leaveinvestiagte
     hide screen invest2
 
-    if extensionsee == True:
-        "words"
+    if extensionsee == False:
+        show dick red frown open at my_left, speak
+        with lsmovement   
+
+        d "I don't know if that's just plain laziness or if we are just too early."
+
+        hide dick
+        show dick red neutral at my_left
+        show morningstar red open at my_right, speak
+        with rsmovement
+
+        m "We're too early, but I like it being both."
+
+
+
+        d "Touche, there's a lot amiss at this time I guess."
+
+
+        
+        d "This is just a little much to just have sitting out. Maybe they had an issue somwhere along the line?"
+
+
+
+        m "I hope so."
+
+
+
+        d "Spoken like a true electrition. I just hope we are able to do it without killing ourselves."
+
+
+
+        m "What a way to go out, at least. I wouldn't even be that mad."
+
+
+
+        d "Yes, because you'd be dead."
+
+
+
+        m "Only a minor roadblock."
+
+        $ extensionsee = True
+        $ interactions += 1
+
+        hide morningstar
+        hide dick       
 
         jump investigate_2
     else:
@@ -1485,30 +1795,65 @@ label malemale:
     hide screen leaveinvestiagte
     hide screen invest2
 
-    if malemale == True:
+    if malemale == False:
+        show morningstar red open at my_right, speak
+        with rsmovement
+
         m "I've never seen a cord like that before."
 
+        hide morningstar
+        show morningstar red rbf at my_right
+        show dick red open at my_left, speak
+        with lsmovement   
+
         d "Good, I'd hope not."
+        
+
 
         m "What's with that cryptic-ass answer?"
 
+
+
         d "It's a suicide cable, it's because if you plug both ends in it'll cause a fire, electrocute you, or any awful fate inbetween."
+
+
 
         m "Now you're talking."
 
+
+
         d "I don't even know where they got one of these, they're illegal. I know since I got the lovely task of trying to buy one a few years back."
+
+
 
         m "That's weird, still it's a great tool."
 
+
+
         m "Maybe whoever decorated with all those fairylights ordered it from some shady online retailor."
+
+
 
         d "Rich people don't tend to cut corners like that though, they tend to like to go all out, you know? Flex a little, especially at weddings."
 
+
+
         m "I'd never guess since I live with a wannabe."
+
+
 
         d "Oh hush. I think it is smart to put a pin in it that though."
 
+
+
         m "Could be good to bring up in conversation, but i just want to find a way to get the bride to try it out."
+
+        $ malemale = True
+        $ items += 1
+        $ interactions += 1
+
+        hide morningstar
+        hide dick       
 
         jump investigate_2
     else:
