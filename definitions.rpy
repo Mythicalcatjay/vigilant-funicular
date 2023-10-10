@@ -131,6 +131,11 @@ image snakegotten = "info/placeholder.png"
 image heroingotten = "info/placeholder.png"
 image glovesgotten = "info/placeholder.png"
 
+# Styles
+
+style default:
+    outlines [ (absolute(1), "#000", absolute(0), absolute(0)) ]
+
 # Transformations
 
 transform my_left:
@@ -219,7 +224,7 @@ screen arrows4:
 
 screen leaveinvestiagte:
         hbox:
-            xalign 0.5
+            xalign 0.0
             yalign 0.0
             textbutton "LEAVE" action Jump("investigate_leave")
 
