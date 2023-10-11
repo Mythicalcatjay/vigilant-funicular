@@ -1,4 +1,4 @@
-##### This is the main script of the game, intended to be the entire script for the demo and the first chapter of the full game #####
+#### This is the main script of the game, intended to be the entire script for the demo and the first chapter of the full game #####
 
 label start:
 
@@ -37,7 +37,6 @@ label start:
     $ poisonmethod = 0
 
     $ malemale = False
-    $ femalefemale = False
     $ faultylights = False
     $ affair = False
     $ affairsnitch = False
@@ -1548,6 +1547,7 @@ label purse:
         pause
         $ heroin = True
         $ poisonmethod += 1
+        $ electricmethod += 1
         $ items += 1
         $ interactions += 1
         hide heroingotten
@@ -1619,7 +1619,64 @@ label aisle:
     hide screen invest2
 
     if aislesee == False:
-        "words"
+        show dick red open at my_left, speak
+        with lsmovement   
+
+        d "I don't know how to feel about the color pallet, it's safe but pretty boring. I feel like I'm not seeing it enough."
+
+        hide dick
+        show dick red neutral at my_left
+        show morningstar red open at my_right, speak
+        with rsmovement
+
+        m "Yeah, at least it's not ugly."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
+
+        d "But isn't being bland almost as bad?"
+
+        hide dick
+        show dick red frown open at my_left, speak
+
+        d "There's nothing to remember about it and you don't feel anything."
+
+        hide morningstar
+        show morningstar red o at my_right, speak
+        hide dick
+        show dick red neutral at my_left
+
+        m "You seem to be feeling something enough, though."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red frown open at my_left, speak
+
+        d "You know what I mean."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red neutral at my_left
+
+        "She shruged a bit, enough to be a bit flippent, but it was doubtful that she didn't."
+
+        hide morningstar
+        show morningstar red o at my_right, speak
+        hide dick
+        show dick red frown at my_left
+
+        m "I thought you wanted to have the floor mattress and mini fridge until you died, but you were forced to change it."
+
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red frown open at my_left
+
+        "Being reminded of that made him cringe. Clearly, that wasn't his proudest moment. She still found his \"pain\" funny, though."
 
         $ aislesee = True
         $ interactions += 1
@@ -1640,7 +1697,53 @@ label alter:
     hide screen invest2
 
     if altersee == False:
-        "words"
+        show dick red open at my_left, speak
+        with lsmovement   
+
+        d "A classic, but it looks like the priest hasn't set anything in there yet."
+
+        hide dick
+        show dick red neutral at my_left
+        show morningstar red open at my_right, speak
+        with rsmovement
+
+        m "That sucks."
+
+        hide morningstar
+        show morningstar red o at my_right, speak
+
+        m "I don't think we'd get anywhere hitting someone with a book or stack of papers, which also sucks."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
+
+        d "I guess they tend to travel light, don't they?"
+
+        hide morningstar
+        show morningstar red open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
+
+        m "It makes sense I guess, but it makes our job a little less creative."
+
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
+
+        d "I'd say I wouldn't like to describe it like that, but after enough time hearing you list off the most random ideas that work half the time? It's valid I guess."
+
+        hide morningstar
+        show morningstar red o at my_right, speak
+
+        m "Well I don't get why you wouldn't want to make the most of it."
+
+        hide morningstar
+        show morningstar red open at my_right, speak
+
+        m "It's not like we've got a lot of choice in it anyway."
 
         $ altersee = True
         $ interactions += 1
@@ -1650,7 +1753,7 @@ label alter:
 
         jump investigate_2
     else:
-        "The world's most meaningful malformed cube."
+        "The world's most meaningful block of wood."
 
         jump investigate_2
 
@@ -1673,27 +1776,45 @@ label benches:
 
         d "Oh hush. They're just benches. You'll be fine."
 
-
+        hide morningstar
+        show morningstar red open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
         m "Whatever, at least it looks like people who are in the back saved their seats, or at least left random shit there."
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
 
         d "It's a good idea if you're early, especially since most guests trust everyone here."
 
-
+        hide morningstar
+        show morningstar red open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
         m "Sucks to be them."
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
 
         d "Absolutely, but you can understand why. It's their family members, in-laws, and buisness partners. You want to keep them close."
 
-
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
         m "No such things as friends here, ey?"
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red smile open at my_left, speak
 
         d "Of course not."   
 
@@ -1749,33 +1870,59 @@ label extension:
 
         m "We're too early, but I like it being both."
 
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red open at my_left, speak
 
         d "Touche, there's a lot amiss at this time I guess."
 
-
+        hide dick
+        show dick red frown open at my_left, speak
         
         d "This is just a little much to just have sitting out. Maybe they had an issue somwhere along the line?"
 
-
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+        hide dick
+        show dick red frown at my_left
 
         m "I hope so."
 
-
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red frown open at my_left, speak
 
         d "Spoken like a true electrition. I just hope we are able to do it without killing ourselves."
 
-
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+        hide dick
+        show dick red frown at my_left
 
         m "What a way to go out, at least. I wouldn't even be that mad."
 
-
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red open at my_left, speak
 
         d "Yes, because you'd be dead."
 
-
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+        hide dick
+        show dick red frown at my_left
 
         m "Only a minor roadblock."
+
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red neutral at my_left
+        
+        "All he did in response to that was roll his eyes."
 
         $ extensionsee = True
         $ interactions += 1
@@ -1785,7 +1932,7 @@ label extension:
 
         jump investigate_2
     else:
-        "A beautiful wedding, funded by someone hauling ass to a departmet store right before the ceremony."
+        "A beautiful wedding, funded by someone hauling ass to a hardware store right before the ceremony."
 
         jump investigate_2
 
@@ -1808,49 +1955,83 @@ label malemale:
 
         d "Good, I'd hope not."
         
-
+        hide morningstar
+        show morningstar red frown open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
         m "What's with that cryptic-ass answer?"
 
-
+        hide morningstar
+        show morningstar red frown at my_right
+        hide dick
+        show dick red open at my_left, speak
 
         d "It's a suicide cable, it's because if you plug both ends in it'll cause a fire, electrocute you, or any awful fate inbetween."
 
-
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
         m "Now you're talking."
 
-
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red neutral at my_left, speak
 
         d "I don't even know where they got one of these, they're illegal. I know since I got the lovely task of trying to buy one a few years back."
 
-
+        hide morningstar
+        show morningstar red o at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
         m "That's weird, still it's a great tool."
 
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
+        m "Maybe whoever decorated with all those shitty fairylights ordered it from some shady online retailor."
 
-        m "Maybe whoever decorated with all those fairylights ordered it from some shady online retailor."
-
-
+        hide morningstar
+        show morningstar red rbf at my_right
+        hide dick
+        show dick red frown open at my_left, speak
 
         d "Rich people don't tend to cut corners like that though, they tend to like to go all out, you know? Flex a little, especially at weddings."
 
-
+        hide morningstar
+        show morningstar red open at my_right, speak
+        hide dick
+        show dick red frown at my_left
 
         m "I'd never guess since I live with a wannabe."
 
-
+        hide morningstar
+        show morningstar red smile at my_right
+        hide dick
+        show dick red frown open at my_left, speak
 
         d "Oh hush. I think it is smart to put a pin in it that though."
 
-
+        hide morningstar
+        show morningstar red smile open at my_right, speak
+        hide dick
+        show dick red neutral at my_left
 
         m "Could be good to bring up in conversation, but i just want to find a way to get the bride to try it out."
 
+        show malemalegotten
+        pause
         $ malemale = True
+        $ electricmethod += 1
         $ items += 1
         $ interactions += 1
+        hide malemalegotten
 
         hide morningstar
         hide dick       
@@ -2080,6 +2261,16 @@ label investigate_leave:
     "It didn't take too long waiting for the other guests to arrive. They were able to bide their time for the ceremony without much of a fuss."
 
     jump end
+
+label mingle_1:
+
+label mingle_2:
+
+label mingle_3:
+
+label mingle_4:
+
+label mingle_leave:
 
 label end:
 
