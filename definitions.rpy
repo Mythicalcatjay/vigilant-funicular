@@ -130,11 +130,12 @@ image mingle 4 = "backgrounds/mingle 4.png"
 image snakegotten = "info/placeholder.png"
 image heroingotten = "info/placeholder.png"
 image glovesgotten = "info/placeholder.png"
+image malemalegotten = "info/placeholder.png"
 
 # Styles
 
 style default:
-    outlines [ (absolute(1), "#000", absolute(0), absolute(0)) ]
+    outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
 # Transformations
 
@@ -361,7 +362,7 @@ screen invest2:
             action Jump("arches2")
         imagebutton:
             xpos 0.547
-            ypos -4950
+            ypos -4955
             idle "investigate buttons/malemale_idle.png"
             hover "investigate buttons/malemale_hover.png"
             action Jump("malemale")
