@@ -1,4 +1,4 @@
-#### This is the main script of the game, intended to be the entire script for the demo and the first chapter of the full game #####
+##### This is the main script of the game, intended to be the entire script for the demo and the first chapter of the full game #####
 
 label start:
 
@@ -22,6 +22,9 @@ label start:
     $ benchessee = False
     $ extensionsee = False
 
+    $ womenssee = False
+    $ menssee = False
+
     $ mingle1 = False
     $ mingle2 = False
     $ mingle3 = False
@@ -44,12 +47,16 @@ label start:
     $ bridetrust = False
     $ electricmethod = 0
 
+    $ trustchance = 0
+
     $ items = 0
     $ interactions = 0
 
     $ letter = 0
 
     jump game_start
+
+############### PREGAME START ###############
 
 label game_start:
 
@@ -325,6 +332,8 @@ label game_start:
     
     jump morningstar_name
 
+#### Dick Name Easter Eggs ####
+
 label shithole:
 
     d "[fd]."
@@ -599,6 +608,8 @@ label dexter_morgan:
 
     jump morningstar_name
 
+####
+
 label morningstar_name:
 
     python:
@@ -669,6 +680,8 @@ label morningstar_name:
     m "It's not like I'm lying. Unless her last words are telling him to fuck himself."
 
     jump pregame
+
+#### Morningstar Name Easter Eggs ####
 
 label felicity_shagwell:
 
@@ -795,6 +808,8 @@ label black_widow:
 
 label the_bride:
 
+####
+
 label pregame:
 
     hide morningstar
@@ -868,6 +883,10 @@ label pregame:
         "Leave to investigate the venue.":
             $ persistent.opening_done = True
             jump investigate_1
+
+############### INVESTIGATION START ###############
+
+#### Investigate 1 ####
 
 label investigate_1:
 
@@ -1451,6 +1470,8 @@ label garden:
 
         jump investigate_1
 
+#### Investigate 2 ####
+
 label investigate_2:
     
     hide screen arrows1
@@ -1547,7 +1568,7 @@ label purse:
         pause
         $ heroin = True
         $ poisonmethod += 1
-        $ electricmethod += 1
+        $ trustchance += 1
         $ items += 1
         $ interactions += 1
         hide heroingotten
@@ -2179,6 +2200,8 @@ label fairylights2:
 
         jump investigate_2
 
+#### Investigate 3 ####
+
 label investigate_3:
 
     hide screen arrows1
@@ -2209,6 +2232,8 @@ label investigate_3:
 
 label unplugged:
 
+#### Invesitagte 4 ####
+
 label investigate_4:
 
     hide screen arrows3
@@ -2233,10 +2258,80 @@ label investigate_4:
         pass
 
     call screen arrows4
+    call screen invest4
 
 label closet:
 
-label bathrooms:
+    hide screen arrows4
+    hide screen leaveinvestiagte
+    hide screen invest4
+
+    if affair == true:
+        "It's probably best to give those two their privacy."
+    else:
+        show
+        
+        m "There should be something good in there."
+
+        d "We just have to not get caught, ey?"
+
+        m "If it's locked I'm going to punch it in."
+
+        "Dick couldn't help but look doubtful at that."
+
+        menu:
+            "Morningstar opens the closet door.":
+                jump closet_d
+            "Dick opens the closet door.":
+                jump closet_m
+
+label closet_d:
+
+        show affairgotten
+        pause
+        $ affair = True
+        $ trustchance += 1
+        $ items += 1
+        $ interactions += 1
+        hide affairgotten
+
+        jump investigate_4
+
+label closet_m:
+
+        show affairgotten
+        pause
+        $ affair = True
+        $ trustchance += 1
+        $ items += 1
+        $ interactions += 1
+        hide affairgotten
+
+        jump investigate_4
+
+label womens_room:
+
+    hide screen arrows4
+    hide screen leaveinvestiagte
+    hide screen invest4
+
+    if womenssee == true:
+        "There's no point in going back yet."
+    else:
+        "It's probably best to give those two their privacy."
+
+label mens_room:
+
+    hide screen arrows4
+    hide screen leaveinvestiagte
+    hide screen invest4
+
+    if menssee == true:
+        "Hell will have to freeze over before trying that again."
+    else:
+        "It's probably best to give those two their privacy."
+
+####
 
 label investigate_leave:
 
@@ -2261,6 +2356,8 @@ label investigate_leave:
     "It didn't take too long waiting for the other guests to arrive. They were able to bide their time for the ceremony without much of a fuss."
 
     jump end
+
+############### MINGLE START ###############
 
 label mingle_1:
 
