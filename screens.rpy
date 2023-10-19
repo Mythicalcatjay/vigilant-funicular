@@ -311,7 +311,7 @@ screen navigation():
 
         textbutton _("Gallery") action ShowMenu ("gallery_cgs")
 
-        textbutton _("Achievements") action ShowMenu("achievments")
+        textbutton _("Achievements") action ShowMenu("achievements_regular")
 
         if _in_replay:
 
