@@ -139,8 +139,14 @@ init python:
 
     ############################### CGS ###############################
 
+    # Opening CG
+
     gallery.button("cg1")
     gallery.unlock_image("cg1")
+
+    ##### Investigate CGs #####
+
+    # Investigate 2 Purse CGs
 
     gallery.button("cg2 1 2")
     gallery.unlock_image("cg2 1 2")
@@ -156,147 +162,190 @@ init python:
     gallery.unlock_image("cg2 15")
     gallery.unlock_image("cg2 16")
 
+    # Investigate 4 Storage Closet CGs
+
+
+
+    # Investigate 4 Women's Room CGs
+
+
+
+    # Investigate 4 Men's Room CGs
+
+
+
     ############################### BACKGROUNDS ###############################
+
+    # Opening Background
+
 
     ##### Investigate Backgrounds #####
 
-    gallery.button("investigate 1")
+    gallery.button("background 1")
     gallery.unlock_image("investigate 1 gloves")
     gallery.unlock_image("investigate 1")
     gallery.unlock_image("mingle 1")
-    gallery.image("regular 1")
+    gallery.image("background 1")
     gallery.condition("persistent.investigate_done")
 
-    gallery.button("investigate 2")
+    gallery.button("background 2")
     gallery.unlock_image("investigate 2")
     gallery.unlock_image("mingle 2")
-    gallery.image("regular 2")
+    gallery.image("background 2")
     gallery.condition("persistent.investigate_done")
 
-    gallery.button("investigate 3")
+    gallery.button("brackground 3")
     gallery.unlock_image("investigate 3")
     gallery.unlock_image("investigate 3")
     gallery.unlock_image("mingle 3")
     gallery.image("regular 3")
     gallery.condition("persistent.investigate_done")
 
-    gallery.button("investigate 4")
+    gallery.button("background 4")
     gallery.unlock_image("investigate 4")
     gallery.unlock_image("mingle 4")
-    gallery.image("regular 4")
+    gallery.image("background 4")
     gallery.condition("persistent.investigate_done")
 
+    ############################### INFORMATON CARDS ###############################
+
+
+
+
 screen gallery_navigation:
+    tag menu
+
     vbox:
-        spacing 20
-        xoffset -100
-        textbutton "Sprites" action ShowMenu("gallery_sprites") 
+        style_prefix "navigation"
+
+        xpos gui.navigation_xpos
+        yalign 0.5
+
+        spacing gui.navigation_spacing
+
+        textbutton "Sprites" action ShowMenu("gallery_morningstar") 
         textbutton "CGS" action ShowMenu("gallery_cgs") 
         textbutton "Backgrounds" action ShowMenu("gallery_backgrounds")
         textbutton "Endings" action ShowMenu("gallery_endings")
-        
-        textbutton "Return":
-            action Return()
-            yoffset 200
 
 screen gallery_sprites:
+    tag menu
+
+    use gallery_navigation
+
     vbox:
-        spacing 20
-        xoffset -100
+        style_prefix "navigation"
+
+        xpos gui.navigation_xpos
+        yalign 0.5
+
+        spacing gui.navigation_spacing
+
         textbutton "Morningstar" action ShowMenu("gallery_morningstar") 
         textbutton "Dick" action ShowMenu("gallery_dick") 
-        
-        textbutton "Return":
-            action Return()
-            yoffset 200
+        textbutton "Back" action ShowMenu("gallery_navigation")
 
 screen gallery_endings:
+    tag menu
+
+    use gallery_navigation
+
     vbox:
-        spacing 20
-        xoffset -100
+        style_prefix "navigation"
+
+        xpos gui.navigation_xpos
+        yalign 0.5
+
+        spacing gui.navigation_spacing
+
         textbutton "Back" action ShowMenu("gallery_navigation")
-        
-        textbutton "Return":
-            action Return()
-            yoffset 200
+        textbutton "Return" action Return() yoffset 200
 
 screen gallery_morningstar:
     tag menu
 
-    hbox:
-        xalign 0.5
-        yalign 0.5
-        spacing 30
-        
-        use gallery_sprites
+    use game_menu(_("Gallery"), scroll="viewport"):
 
-        grid 3 3: 
-            add gallery.make_button(name="morningstar frown open",unlocked= im.Scale("morningstar/frown open.png",200,400),locked="dick.png")
-            add gallery.make_button(name="morningstar frown",unlocked= im.Scale("morningstar/frown.png",200,400),locked="dick.png")
-            add gallery.make_button(name="morningstar o",unlocked= im.Scale("morningstar/o.png",200,400),locked="dick.png")
-            add gallery.make_button(name="morningstar open",unlocked= im.Scale("morningstar/open.png",200,400),locked="dick.png")
-            add gallery.make_button(name="morningstar rbf",unlocked= im.Scale("morningstar/rbf.png",200,400),locked="dick.png")
-            add gallery.make_button(name="morningstar shock",unlocked= im.Scale("morningstar/shock.png",200,400),locked="dick.png")
-            add gallery.make_button(name="morningstar smile",unlocked= im.Scale("morningstar/smile.png",200,400),locked="dick.png")
-            add gallery.make_button(name="morningstar smile open",unlocked= im.Scale("morningstar/smile open.png",200,400),locked="dick.png")
-            add gallery.make_button(name="morningstar unhinged",unlocked= im.Scale("morningstar/unhinged.png",200,400),locked="dick.png")
-            spacing 15
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 30
+            
+            use gallery_sprites
+
+            grid 3 3: 
+                add gallery.make_button(name="morningstar frown open",unlocked= im.Scale("morningstar/frown open.png",200,400),locked="lock.png")
+                add gallery.make_button(name="morningstar frown",unlocked= im.Scale("morningstar/frown.png",200,400),locked="lock.png")
+                add gallery.make_button(name="morningstar o",unlocked= im.Scale("morningstar/o.png",200,400),locked="lock.png")
+                add gallery.make_button(name="morningstar open",unlocked= im.Scale("morningstar/open.png",200,400),locked="lock.png")
+                add gallery.make_button(name="morningstar rbf",unlocked= im.Scale("morningstar/rbf.png",200,400),locked="lock.png")
+                add gallery.make_button(name="morningstar shock",unlocked= im.Scale("morningstar/shock.png",200,400),locked="lock.png")
+                add gallery.make_button(name="morningstar smile",unlocked= im.Scale("morningstar/smile.png",200,400),locked="lock.png")
+                add gallery.make_button(name="morningstar smile open",unlocked= im.Scale("morningstar/smile open.png",200,400),locked="lock.png")
+                add gallery.make_button(name="morningstar unhinged",unlocked= im.Scale("morningstar/unhinged.png",200,400),locked="lock.png")
+                spacing 15
 
 screen gallery_dick:
     tag menu
 
-    hbox:
-        xalign 0.5
-        yalign 0.5
-        spacing 30
-        
-        use gallery_sprites
+    use game_menu(_("Gallery"), scroll="viewport"):
 
-        grid 5 3: 
-            add gallery.make_button(name="dick 1 sulk",unlocked= im.Scale("dick/dick 1 75/sulk.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick 1 neutral",unlocked= im.Scale("dick/dick 1 75/neutral.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick 1 open",unlocked= im.Scale("dick/dick 1 75/open.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick 1 rbf",unlocked= im.Scale("dick/dick 1 75/rbf.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick 1 smile",unlocked= im.Scale("dick/dick 1 75/smile.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick 1 smile open",unlocked= im.Scale("dick/dick 1 75/smile open.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick 1 pissy",unlocked= im.Scale("dick/dick 1 75/pissy.png",200,400),locked="dick.png")
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 30
+            
+            use gallery_sprites
 
-            add gallery.make_button(name="dick frown open",unlocked= im.Scale("dick/dick/frown open.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick frown",unlocked= im.Scale("dick/dick/frown.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick neutral",unlocked= im.Scale("dick/dick/neutral.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick open",unlocked= im.Scale("dick/dick/open.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick rbf",unlocked= im.Scale("dick/dick/rbf.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick smile",unlocked= im.Scale("dick/dick/smile.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick smile open",unlocked= im.Scale("dick/dick/smile open.png",200,400),locked="dick.png")
-            add gallery.make_button(name="dick pissy",unlocked= im.Scale("dick/dick/pissy.png",200,400),locked="dick.png")
-            spacing 15
+            grid 5 3: 
+                add gallery.make_button(name="dick 1 sulk",unlocked= im.Scale("dick/dick 1 75/sulk.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick 1 neutral",unlocked= im.Scale("dick/dick 1 75/neutral.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick 1 open",unlocked= im.Scale("dick/dick 1 75/open.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick 1 rbf",unlocked= im.Scale("dick/dick 1 75/rbf.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick 1 smile",unlocked= im.Scale("dick/dick 1 75/smile.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick 1 smile open",unlocked= im.Scale("dick/dick 1 75/smile open.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick 1 pissy",unlocked= im.Scale("dick/dick 1 75/pissy.png",200,400),locked="lock.png")
+
+                add gallery.make_button(name="dick frown open",unlocked= im.Scale("dick/dick/frown open.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick frown",unlocked= im.Scale("dick/dick/frown.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick neutral",unlocked= im.Scale("dick/dick/neutral.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick open",unlocked= im.Scale("dick/dick/open.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick rbf",unlocked= im.Scale("dick/dick/rbf.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick smile",unlocked= im.Scale("dick/dick/smile.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick smile open",unlocked= im.Scale("dick/dick/smile open.png",200,400),locked="lock.png")
+                add gallery.make_button(name="dick pissy",unlocked= im.Scale("dick/dick/pissy.png",200,400),locked="lock.png")
+                spacing 15
 
 screen gallery_cgs:
     tag menu
 
-    hbox:
-        xalign 0.5
-        yalign 0.5
-        spacing 30
-        
-        use gallery_navigation
+    use game_menu(_("Gallery"), scroll="viewport"):
 
-        grid 3 3: 
-            add gallery.make_button(name="cg1",unlocked= im.Scale("cgs/cg1.png",468,264),locked="dick.png")
-            add gallery.make_button(name="cg2",unlocked= im.Scale("cgs/cg2 1 2.png",468,264),locked="dick.png")
-            spacing 15
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 30
+            
+            use gallery_navigation
+
+            grid 3 3: 
+                add gallery.make_button(name="cg1",unlocked= im.Scale("cgs/cg1.png",468,264),locked="lock.png")
+                add gallery.make_button(name="cg2 1 2",unlocked= im.Scale("cgs/cg2 1 2.png",468,264),locked="lock.png")
+                spacing 15
 
 screen gallery_backgrounds:
     tag menu
 
-    hbox:
-        xalign 0.5
-        yalign 0.5
-        spacing 30
-        
-        use gallery_navigation
+    use game_menu(_("Gallery"), scroll="viewport"):
 
-        grid 3 3: 
-            add gallery.make_button(name="investigate 1",unlocked= im.Scale("backgrounds/investigate 1.png",468,264),locked="dick.png")
-            add gallery.make_button(name="investigate 2",unlocked= im.Scale("backgrounds/investigate 2.png",468,264),locked="dick.png")
-            spacing 15
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 30
+            
+            use gallery_navigation
+
+            grid 3 3: 
+                add gallery.make_button(name="background 1",unlocked= im.Scale("backgrounds/background 1.png",468,264),locked="lock.png")
+                add gallery.make_button(name="background 2",unlocked= im.Scale("backgrounds/background 2.png",468,264),locked="lock.png")
+                spacing 15
