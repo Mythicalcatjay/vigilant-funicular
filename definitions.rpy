@@ -137,6 +137,9 @@ image malemalegotten = "info/placeholder.png"
 style default:
     outlines [ (absolute(3), "#000", absolute(0), absolute(0)) ]
 
+style invest_text:
+    outlines [ (absolute(3), "#6B0000", absolute(0), absolute(0)) ]
+
 # Transformations
 
 transform my_left:
@@ -384,3 +387,13 @@ screen invest2:
             idle "investigate buttons/fairylights2_idle.png"
             hover "investigate buttons/fairylights2_hover.png"
             action Jump("fairylights2")
+
+screen invest4:
+    tag menu
+    hbox:
+        xalign 0.5
+        yalign 0.5
+        spacing 50
+        textbutton "Supply Closet" action Jump("closet")
+        textbutton "Ladies' Room" action Jump("womens_room")
+        textbutton "Men's Room" action Jump("mens_room")
