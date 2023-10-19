@@ -2257,8 +2257,8 @@ label investigate_4:
     else:
         pass
 
-    call screen arrows4
     call screen invest4
+    call screen arrows4
 
 label closet:
 
@@ -2269,8 +2269,7 @@ label closet:
     if affair == true:
         "It's probably best to give those two their privacy."
     else:
-        show
-        
+
         m "There should be something good in there."
 
         d "We just have to not get caught, ey?"
